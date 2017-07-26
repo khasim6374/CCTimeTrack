@@ -1,0 +1,1120 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CCTimeTrack
+</name>
+</assembly>
+<members>
+<member name="F:CCTimeTrack.Login.RegisterHyperLink">
+	<summary>
+RegisterHyperLink control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Login.LoginUser">
+	<summary>
+LoginUser control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.btnAddSupplier">
+	<summary>
+btnAddSupplier control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.btnDDReport">
+	<summary>
+btnDDReport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.btnPlanReport">
+	<summary>
+btnPlanReport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.btnDDFailed">
+	<summary>
+btnDDFailed control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.btnPipelineReport">
+	<summary>
+btnPipelineReport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.btnBDReport">
+	<summary>
+btnBDReport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.ChkBox">
+	<summary>
+ChkBox control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.btnDueDiligence">
+	<summary>
+btnDueDiligence control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.btnPlanning">
+	<summary>
+btnPlanning control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.btnFieldWorkSettlement">
+	<summary>
+btnFieldWorkSettlement control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.btnHold">
+	<summary>
+btnHold control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.btnMasterGrid">
+	<summary>
+btnMasterGrid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.NewReport">
+	<summary>
+NewReport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.SqlDataSource3">
+	<summary>
+SqlDataSource3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.SqlDataSource4">
+	<summary>
+SqlDataSource4 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.SqlDataSource5">
+	<summary>
+SqlDataSource5 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.SqlDataSource6">
+	<summary>
+SqlDataSource6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.SqlDataSource7">
+	<summary>
+SqlDataSource7 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.SqlDataSource8">
+	<summary>
+SqlDataSource8 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.SqlDataSource9">
+	<summary>
+SqlDataSource9 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.SqlDSEmployee">
+	<summary>
+SqlDSEmployee control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.SqlDSHistoryList">
+	<summary>
+SqlDSHistoryList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.grid2">
+	<summary>
+grid2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.myButton">
+	<summary>
+myButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.ASPxHiddenField1">
+	<summary>
+ASPxHiddenField1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.hdnField">
+	<summary>
+hdnField control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.supplier">
+	<summary>
+supplier control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.gridSupplier">
+	<summary>
+gridSupplier control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.ASPxCallback1">
+	<summary>
+ASPxCallback1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.DSMultiSource">
+	<summary>
+DSMultiSource control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.MultiGrid">
+	<summary>
+MultiGrid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.ASPxCallback2TP">
+	<summary>
+ASPxCallback2TP control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.pcDDFailedReason">
+	<summary>
+pcDDFailedReason control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.PopupControlContentControl1">
+	<summary>
+PopupControlContentControl1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.Panel1">
+	<summary>
+Panel1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.PanelContent1">
+	<summary>
+PanelContent1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.textarea">
+	<summary>
+textarea control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.btOK">
+	<summary>
+btOK control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.fileUpload.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.fileUpload.fileUpload">
+	<summary>
+fileUpload control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.fileUpload.grd">
+	<summary>
+grd control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.fileUpload.sqlDoc">
+	<summary>
+sqlDoc control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.historicreview.lnkExport">
+	<summary>
+lnkExport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.historicreview.grdExporter">
+	<summary>
+grdExporter control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.historicreview.gridHistory">
+	<summary>
+gridHistory control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.historicreview.sqData">
+	<summary>
+sqData control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.historicreview.pnlPopup">
+	<summary>
+pnlPopup control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Timesheetsummary.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Timesheetsummary.GridView1">
+	<summary>
+GridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.timetrack.gridTimesheet">
+	<summary>
+gridTimesheet control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.timetrack.sQTimesheet">
+	<summary>
+sQTimesheet control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.timetrack.sQEmployee">
+	<summary>
+sQEmployee control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.timetrack.sQProject">
+	<summary>
+sQProject control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.timetrack.sQTasks">
+	<summary>
+sQTasks control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.timetrack.SqlDSEmployee">
+	<summary>
+SqlDSEmployee control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.ccdoc.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.ccdoc.ASPxGridView1">
+	<summary>
+ASPxGridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.ccdoc.sqData">
+	<summary>
+sqData control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.PlanningScoreCard.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.PlanningScoreCard.lblClient">
+	<summary>
+lblClient control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.PlanningScoreCard.lblSupplier">
+	<summary>
+lblSupplier control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.PlanningScoreCard.lblAuditor">
+	<summary>
+lblAuditor control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.PlanningScoreCard.frmPlanningScoreCard">
+	<summary>
+frmPlanningScoreCard control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.PlanningScoreCard.DSPlanningScoreCard">
+	<summary>
+DSPlanningScoreCard control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.xmaslist.btnExport">
+	<summary>
+btnExport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.xmaslist.grdXmazlist">
+	<summary>
+grdXmazlist control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.xmaslist.grdXmazlistEprt">
+	<summary>
+grdXmazlistEprt control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.xmaslist.XmaslistDS">
+	<summary>
+XmaslistDS control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.xmaslist.EmployeeDS">
+	<summary>
+EmployeeDS control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.CompletedAudits.GridView1">
+	<summary>
+GridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.CompletedAudits.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.StatusUpdate.EmployeeDS">
+	<summary>
+EmployeeDS control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.StatusUpdate.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.StatusUpdate.SqlDataSource2">
+	<summary>
+SqlDataSource2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.StatusUpdate.ASPxGridView1">
+	<summary>
+ASPxGridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.StatusUpdate.myButton">
+	<summary>
+myButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.StatusUpdate.SqlDSHistoryList">
+	<summary>
+SqlDSHistoryList control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.StatusUpdate.pnlPlanningScoreCard">
+	<summary>
+pnlPlanningScoreCard control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.StatusUpdate.ASPxCallback1">
+	<summary>
+ASPxCallback1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.StatusUpdate.ASPxHiddenField1">
+	<summary>
+ASPxHiddenField1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.StatusUpdate.ASPxHiddenField2">
+	<summary>
+ASPxHiddenField2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.StatusUpdate.ASPxHiddenField3">
+	<summary>
+ASPxHiddenField3 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.CCTimeTrack.AuditTest.Label1">
+	<summary>
+Label1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.CCTimeTrack.AuditTest.CmbSupplier">
+	<summary>
+CmbSupplier control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.CCTimeTrack.AuditTest.ButSubmit">
+	<summary>
+ButSubmit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.CCTimeTrack.AuditTest.SqlDataSource2">
+	<summary>
+SqlDataSource2 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.CCTimeTrack.AuditTest.Lblstatus">
+	<summary>
+Lblstatus control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.CCTimeTrack.AuditTest.chktests">
+	<summary>
+chktests control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.CCTimeTrack.AuditTest.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.invoiceprint.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.invoiceprint.FormView1">
+	<summary>
+FormView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.invoiceprint.SqlInvoice">
+	<summary>
+SqlInvoice control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="P:CCTimeTrack.My.MyWebExtension.Computer">
+	<summary>
+ Returns information about the host computer.
+ </summary>
+</member><member name="P:CCTimeTrack.My.MyWebExtension.User">
+	<summary>
+ Returns information for the current Web user.
+ </summary>
+</member><member name="P:CCTimeTrack.My.MyWebExtension.Request">
+	<summary>
+ Returns Request object.
+ </summary>
+</member><member name="P:CCTimeTrack.My.MyWebExtension.Response">
+	<summary>
+ Returns Response object.
+ </summary>
+</member><member name="P:CCTimeTrack.My.MyWebExtension.Log">
+	<summary>
+ Returns the Asp log object.
+ </summary>
+</member><member name="T:CCTimeTrack.My.MyWebExtension">
+	<summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CCTimeTrack.ProjectSummary.ButExport">
+	<summary>
+ButExport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.ProjectSummary.GridView1">
+	<summary>
+GridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.ProjectSummary.ProjsummaryDataSource">
+	<summary>
+ProjsummaryDataSource control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.showreport.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.auditormatrix.form1">
+	<summary>
+form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.NewReport.lnkExport">
+	<summary>
+lnkExport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.NewReport.grdExporter">
+	<summary>
+grdExporter control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.NewReport.NewReport">
+	<summary>
+NewReport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.NewReport.sqData">
+	<summary>
+sqData control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.NewReport.pnlPopup">
+	<summary>
+pnlPopup control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Invoicing.grdInsertInvoice">
+	<summary>
+grdInsertInvoice control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Invoicing.hdnValue">
+	<summary>
+hdnValue control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Invoicing.hdnValueEdit">
+	<summary>
+hdnValueEdit control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Invoicing.lblStatus">
+	<summary>
+lblStatus control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Invoicing.grdEditInvoice">
+	<summary>
+grdEditInvoice control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Invoicing.SqlInvoice">
+	<summary>
+SqlInvoice control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Invoicing.SqlClientID">
+	<summary>
+SqlClientID control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Invoicing.SqlSupplier">
+	<summary>
+SqlSupplier control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Invoicing.SqlAuditor">
+	<summary>
+SqlAuditor control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Invoicing.SqlEditSupplier">
+	<summary>
+SqlEditSupplier control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Invoicing.SqlEditAuditor">
+	<summary>
+SqlEditAuditor control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Invoicing.SqlBillingTypes">
+	<summary>
+SqlBillingTypes control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.SiteMaster.Head1">
+	<summary>
+Head1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.SiteMaster.HeadContent">
+	<summary>
+HeadContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.SiteMaster.Form1">
+	<summary>
+Form1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.SiteMaster.LoginName1">
+	<summary>
+LoginName1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.SiteMaster.MainContent">
+	<summary>
+MainContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:CCTimeTrack.DSReport.WebgetInvoice_spDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:CCTimeTrack.DSReport.WebgetInvoiceDetails_spDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:CCTimeTrack.DSReport.WebgetInvoice_spRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:CCTimeTrack.DSReport.WebgetInvoiceDetails_spRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:CCTimeTrack.DSReport.WebgetInvoice_spRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:CCTimeTrack.DSReport.WebgetInvoiceDetails_spRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:CCTimeTrack.DSReport">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:CCTimeTrack.DSReportTableAdapters.WebgetInvoice_spTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:CCTimeTrack.DSReportTableAdapters.WebgetInvoiceDetails_spTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:CCTimeTrack.DSReportTableAdapters.TableAdapterManager.UpdateUpdatedRows(CCTimeTrack.DSReport,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:CCTimeTrack.DSReportTableAdapters.TableAdapterManager.UpdateInsertedRows(CCTimeTrack.DSReport,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:CCTimeTrack.DSReportTableAdapters.TableAdapterManager.UpdateDeletedRows(CCTimeTrack.DSReport,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:CCTimeTrack.DSReportTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:CCTimeTrack.DSReportTableAdapters.TableAdapterManager.UpdateAll(CCTimeTrack.DSReport)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:CCTimeTrack.DSReportTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:CCTimeTrack.DSReportTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:CCTimeTrack.DSReportTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="F:CCTimeTrack.Deleteme.SqlDataSource1">
+	<summary>
+SqlDataSource1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Deleteme.DetailsView1">
+	<summary>
+DetailsView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Deleteme.SqlDataSource14">
+	<summary>
+SqlDataSource14 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Deleteme.SqlDataSource6">
+	<summary>
+SqlDataSource6 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Deleteme.SqlDataSourceproj">
+	<summary>
+SqlDataSourceproj control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Deleteme.GridView1">
+	<summary>
+GridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+</members>
+</doc>

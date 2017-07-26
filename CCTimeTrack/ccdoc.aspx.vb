@@ -1,0 +1,67 @@
+﻿Imports System.IO
+Public Class ccdoc
+    Inherits System.Web.UI.Page
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+    End Sub
+
+    Protected Sub ASPxGridView1_HtmlDataCellPrepared(sender As Object, e As DevExpress.Web.ASPxGridViewTableDataCellEventArgs)
+        If e.DataColumn.FieldName = "Document" Then
+            Dim cellValue = Path.GetFileName(e.CellValue)
+            If File.Exists(cellValue) Then
+                e.Cell.Text = "<a href='" & cellValue & "' target='_blank'>" & cellValue & "</a>"
+            ElseIf File.Exists(Server.MapPath("~/tmp/" & cellValue)) Then
+                e.Cell.Text = "<a href='../../tmp/" & cellValue & "' target='_blank'>" & cellValue & "</a>"
+            End If
+        End If
+    End Sub
+
+    Protected Sub hyperLink_Init(ByVal sender As Object, ByVal e As EventArgs)
+        Dim btn As LinkButton = DirectCast(sender, LinkButton)
+        Dim aa = btn.CommandArgument.ToString()
+        'Response.Clear()
+        Dim ee = Path.GetFileName(aa)
+        'Response.ContentType = "application/octet-stream"
+        'Response.AddHeader("Content-Disposition", "attachment; filename=" + ee)
+        'Response.Output.Write(aa)
+        'Response.End()
+
+
+        Dim filename As String = aa
+        If filename <> "" Then
+            Dim path As String = Server.MapPath(filename)
+            Dim file As New System.IO.FileInfo(filename)
+            If file.Exists Then
+                Response.Clear()
+                Response.AddHeader("Content-Disposition", "attachment; filename=" + file.Name)
+                Response.AddHeader("Content-Length", file.Length.ToString())
+                Response.ContentType = "application/octet-stream"
+                Response.WriteFile(file.FullName)
+                Response.End()
+            Else
+                Try
+                    Dim filePath As String = ConfigurationSettings.AppSettings("FilePath")
+                    Dim filename1 = String.Format("{0}\{1}", Server.MapPath(filePath), aa)
+                    Dim file1 As New System.IO.FileInfo(filename1)
+                    If file1.Exists Then
+                        Response.Clear()
+                        Response.AddHeader("Content-Disposition", "attachment; filename=" + file1.Name)
+                        Response.AddHeader("Content-Length", file1.Length.ToString())
+                        Response.ContentType = "application/octet-stream"
+                        Response.WriteFile(file1.FullName)
+                        Response.End()
+                    Else
+                        Response.Write("This file does not exist.")
+                    End If
+                Catch ex As Exception
+                    Response.Write("This file does not exist.")
+                End Try
+            End If
+        End If
+
+
+
+
+    End Sub
+End Class
