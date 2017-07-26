@@ -11,7 +11,7 @@
         }
         .PullListUp
         {
-            margin-top:-60px;
+            margin-top:-32px;
         }
         .PullListUp2
         {
@@ -230,59 +230,59 @@ ORDER BY CC_Planning_History.StatusID">
         <ClientSideEvents EndCallback="OnEndCallBack2" BeginCallback="function(s,e){
             if(e.command=='UPDATEEDIT'){OnEndCallBack2(s,e);}}" CustomButtonClick="function(s, e) { if(e.buttonID == 'myButton'){ASPxHiddenField1.Set('index', e.visibleIndex);s.StartEditRow(e.visibleIndex);}}" />
         <Columns>
-            <dx:GridViewCommandColumn ShowDeleteButton="true" Caption=" ">
+            <dx:GridViewCommandColumn ShowDeleteButton="true" Caption=" " VisibleIndex="0">
             </dx:GridViewCommandColumn>
-            <dx:GridViewCommandColumn ShowNewButtonInHeader="true" Caption=" ">
+            <dx:GridViewCommandColumn ShowNewButtonInHeader="true" Caption=" " VisibleIndex="1">
                 <CustomButtons>
                         <dx:GridViewCommandColumnCustomButton ID="myButton" Text="Edit">
                         </dx:GridViewCommandColumnCustomButton>
                     </CustomButtons>
             </dx:GridViewCommandColumn>
-            <dx:GridViewDataComboBoxColumn Caption="Client" FieldName="Clientid" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
+            <dx:GridViewDataComboBoxColumn Visible="True" VisibleIndex="2" Caption="Client" FieldName="Clientid" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
                 <PropertiesComboBox DataSourceID="SqlDataSource5" TextField="ClientName" ValueField="Clientid">
                 </PropertiesComboBox>
                 <EditFormCaptionStyle Font-Bold="True">
                 </EditFormCaptionStyle>
-                <EditFormSettings ColumnSpan="2" />
+                <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="0" />
                 <Settings AllowAutoFilter="Default" AllowSort="True" SortMode="DisplayText" />
             </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn Caption="Supplier" FieldName="SupplierId" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
+            <dx:GridViewDataComboBoxColumn Visible="True" VisibleIndex="3" Caption="Supplier" FieldName="SupplierId" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
                 <PropertiesComboBox DataSourceID="SqlDataSource6" TextField="supplierName" ValueField="SupplierId">
                 </PropertiesComboBox>
                 <EditFormCaptionStyle Font-Bold="True">
                 </EditFormCaptionStyle>
-                <EditFormSettings ColumnSpan="2" />
+                <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="1" />
                 <Settings AllowAutoFilter="Default" AllowSort="True" SortMode="DisplayText" />
             </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn Caption="Auditor" FieldName="Auditor" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
+            <dx:GridViewDataComboBoxColumn Visible="True" VisibleIndex="4" Caption="Auditor" FieldName="Auditor" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
 	            <PropertiesComboBox DataSourceID="SqlDataSource8" TextField="Employee" ValueField="Employee">
 	            </PropertiesComboBox>
 	            <EditFormCaptionStyle Font-Bold="True">
 	            </EditFormCaptionStyle>
-	            <EditFormSettings ColumnSpan="2" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="5" />
 	            <Settings AllowHeaderFilter="False" />
             </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn Caption="Planner" FieldName="Planner" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
+            <dx:GridViewDataComboBoxColumn Visible="True" VisibleIndex="5" Caption="Planner" FieldName="Planner" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
 	            <PropertiesComboBox DataSourceID="SqlDataSource7" TextField="Employee" ValueField="Employee">
 	            </PropertiesComboBox>
 	            <EditFormCaptionStyle Font-Bold="True">
 	            </EditFormCaptionStyle>
-	            <EditFormSettings ColumnSpan="2" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="6" />
             </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataTextColumn Caption="DD Lead" FieldName="DDLead">
+            <dx:GridViewDataTextColumn Visible="True" VisibleIndex="6" Caption="DD Lead" FieldName="DDLead">
 	            <PropertiesTextEdit DisplayFormatInEditMode="True" DisplayFormatString="C2">
 	            </PropertiesTextEdit>
-	            <EditFormSettings ColumnSpan="2" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="7" />
 	            <Settings AllowHeaderFilter="False" />
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn Caption="DD Spend" FieldName="DDSpend">
+            <dx:GridViewDataTextColumn Caption="DD Spend" FieldName="DDSpend" Visible="True" VisibleIndex="6">
 	            <PropertiesTextEdit DisplayFormatInEditMode="True" DisplayFormatString="C2">
 	            </PropertiesTextEdit>
-	            <EditFormSettings ColumnSpan="2" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="3" />
 	            <Settings AllowHeaderFilter="False" />
             </dx:GridViewDataTextColumn>
 
-            <dx:GridViewDataComboBoxColumn Caption="Planning Status" FieldName="StatusId" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
+            <dx:GridViewDataComboBoxColumn Visible="True" VisibleIndex="7" Caption="Planning Status" FieldName="StatusId" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
 	            <PropertiesComboBox DataSourceID="SqlDataSource4" TextField="Status" ValueField="StatusId">
 	             <ClientSideEvents SelectedIndexChanged="function(s, e) {
 	             if(grid2.GetEditor('StatusId').GetValue()=='10'){
@@ -302,64 +302,64 @@ ORDER BY CC_Planning_History.StatusID">
 	            </PropertiesComboBox>
 	            <EditFormCaptionStyle Font-Bold="True">
 	            </EditFormCaptionStyle>
-	            <EditFormSettings ColumnSpan="2" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="8" />
             </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataDateColumn FieldName="NotificationLetterDate" ShowInCustomizationForm="True">
+            <dx:GridViewDataDateColumn Visible="True" VisibleIndex="9" FieldName="NotificationLetterDate" ShowInCustomizationForm="True">
 	            <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormatString="MM/dd/yyyy"></PropertiesDateEdit>
-	            <EditFormSettings ColumnSpan="2" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="12" />
             </dx:GridViewDataDateColumn>
             <dx:GridViewDataDateColumn FieldName="ContractReceiptDate" ShowInCustomizationForm="True" Visible="False">
 	            <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
-	            <EditFormSettings ColumnSpan="2" Visible="True" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="9" />
             </dx:GridViewDataDateColumn>
             
             <dx:GridViewDataDateColumn FieldName="COQDate" ShowInCustomizationForm="True" Visible="False">
 	            <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
-	            <EditFormSettings ColumnSpan="2" Visible="True" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="11" />
             </dx:GridViewDataDateColumn>
-            <dx:GridViewDataDateColumn Caption="Kick Off Date" FieldName="scheduleddate" ShowInCustomizationForm="True">
+            <dx:GridViewDataDateColumn Visible="True" VisibleIndex="10" Caption="Kick Off Date" FieldName="scheduleddate" ShowInCustomizationForm="True">
 	            <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
-	            <EditFormSettings ColumnSpan="2" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="16" />
 	            <Settings AllowHeaderFilter="False" />
             </dx:GridViewDataDateColumn>
             <dx:GridViewDataDateColumn FieldName="Data_Received_Date" Caption="Data Received Date" ShowInCustomizationForm="True" Visible="False">
 	            <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
-	            <EditFormSettings ColumnSpan="2" Visible="True" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="13" />
             </dx:GridViewDataDateColumn>
 
-            <dx:GridViewDataComboBoxColumn Caption="Lead Planner" FieldName="LeadPlanner" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
+            <dx:GridViewDataComboBoxColumn Visible="True" VisibleIndex="11" Caption="Lead Planner" FieldName="LeadPlanner" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
 	            <PropertiesComboBox DataSourceID="SqlDataSource7" TextField="Employee" ValueField="Employee">
 	            </PropertiesComboBox>
 	            <EditFormCaptionStyle Font-Bold="True">
 	            </EditFormCaptionStyle>
-	            <EditFormSettings ColumnSpan="2" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="4" />
             </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn Caption="Fixed Fee/Gain Share" FieldName="Type">
+            <dx:GridViewDataComboBoxColumn Caption="Fixed Fee/Gain Share" FieldName="Type" Visible="True" VisibleIndex="12">
 	            <PropertiesComboBox TextField="" ValueField="">
 		            <Items>
 			            <dx:ListEditItem Text="Gain Share" Value="Gain Share" />
 			            <dx:ListEditItem Text="Fixed Fee" Value="Fixed Fee" />
 		            </Items>
 	            </PropertiesComboBox>
-	            <EditFormSettings ColumnSpan="2" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="2" />
 	            <Settings AllowHeaderFilter="False" />
             </dx:GridViewDataComboBoxColumn>
             <dx:GridViewDataDateColumn FieldName="DDWriteupDate" ShowInCustomizationForm="True" Visible="False">
 	            <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
-	            <EditFormSettings ColumnSpan="2" Visible="True" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="10" />
             </dx:GridViewDataDateColumn>
 
             <dx:GridViewDataDateColumn FieldName="SampleSend" Caption="Sample Issued Date" Visible="False" ShowInCustomizationForm="True">
 	            <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
-	            <EditFormSettings ColumnSpan="2" Visible="True" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="15" />
             </dx:GridViewDataDateColumn>
             <dx:GridViewDataDateColumn FieldName="SampleApprovaldate" Caption="Sample Approved Date" Visible="False" ShowInCustomizationForm="True">
 	            <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
-	            <EditFormSettings ColumnSpan="2" Visible="True" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="14" />
             </dx:GridViewDataDateColumn>
 
             <dx:GridViewDataTextColumn Visible="False">
-	             <EditFormSettings Visible="True" RowSpan="9" />
+	             <EditFormSettings Visible="True" RowSpan="9" VisibleIndex="3" />
 	             <EditItemTemplate>
 		            <dx:ASPxListBox ID="ASPxListBox1" runat="server" DataSourceID="SqlDSHistoryList"
 			             ValueField="TrackingID" ValueType="System.Int32" Height="220px" CssClass="PullListUp" ItemStyle-Border-BorderColor="White" ItemStyle-Border-BorderStyle="None" Border-BorderStyle="Solid" CaptionCellStyle-BackColor="#DCDCDC" Border-BorderColor="Blue">

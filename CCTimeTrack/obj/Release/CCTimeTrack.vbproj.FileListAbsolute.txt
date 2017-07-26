@@ -31,3 +31,4 @@ E:\Gopan\CCTimeTrack\CCTimeTrack\obj\Release\CCTimeTrack.dll.licenses
 E:\Gopan\CCTimeTrack\CCTimeTrack\obj\Release\CCTimeTrack.dll
 E:\Gopan\CCTimeTrack\CCTimeTrack\obj\Release\CCTimeTrack.xml
 E:\Gopan\CCTimeTrack\CCTimeTrack\obj\Release\CCTimeTrack.pdb
+E:\Gopan\CCTimeTrack\CCTimeTrack\obj\Release\CCTimeTrack.vbprojResolveAssemblyReference.cache

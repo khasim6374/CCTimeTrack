@@ -227,33 +227,49 @@ Partial Class TrackingPlanner
                 End If
                 If (c.FieldName.ToString()).StartsWith("ContractsReceived") Then
                     c.Caption = "Contract Received Date"
+                    c.EditFormSettings.Visible = True
+                    c.EditFormSettings.VisibleIndex = "9"
                 End If
                 If (c.FieldName.ToString()).StartsWith("DDWriteupDate") Then
                     c.Caption = "DD Write Up Completed"
+                    c.EditFormSettings.Visible = True
+                    c.EditFormSettings.VisibleIndex = "10"
                 End If
                 If (c.FieldName.ToString()).StartsWith("Data_Received_Date") Then
                     c.Caption = "Data Received Date"
+                    c.EditFormSettings.Visible = True
+                    c.EditFormSettings.VisibleIndex = "13"
                 End If
                 If (c.FieldName.ToString()).StartsWith("ContractOwner") Then
                     c.Caption = "Contract Owner Questionnaire"
                 End If
                 If (c.FieldName.ToString()).StartsWith("SampleSend") Then
                     c.Caption = "Sample Issued Date"
+                    c.EditFormSettings.Visible = True
+                    c.EditFormSettings.VisibleIndex = "15"
                 End If
                 If (c.FieldName.ToString()).StartsWith("NotificationLetterDate") Then
                     c.Caption = "NDR Date"
+                    c.EditFormSettings.Visible = True
+                    c.EditFormSettings.VisibleIndex = "12"
                 End If
                 If (c.FieldName.ToString()).StartsWith("SampleApprovaldate") Then
                     c.Caption = "Sample Approval Date"
+                    c.EditFormSettings.Visible = True
+                    c.EditFormSettings.VisibleIndex = "14"
                 End If
                 'If (c.FieldName.ToString()).StartsWith("SampleSend") Then
                 '    c.Caption = "Sample Sent Date"
                 'End If
                 If (c.FieldName.ToString()).StartsWith("scheduleddate") Then
                     c.Caption = "Kick-Off Date"
+                    c.EditFormSettings.Visible = True
+                    c.EditFormSettings.VisibleIndex = "16"
                 End If
                 If (c.FieldName.ToString()).StartsWith("DDSpend") OrElse (c.FieldName.ToString()).StartsWith("DDLead") Then
                     c.PropertiesEdit.DisplayFormatString = "C2"
+                    c.EditFormSettings.Visible = True
+                    c.EditFormSettings.VisibleIndex = "3"
                     c.Visible = False
                 End If
             End If
@@ -434,8 +450,10 @@ Partial Class TrackingPlanner
             AudColumn.PropertiesComboBox.ValueField = "Employee"
             AudColumn.FieldName = "Auditor"
             AudColumn.EditFormSettings.ColumnSpan = "2"
-            'AudColumn.Visible = False
-            'AudColumn.EditFormSettings.Visible = True
+            AudColumn.Visible = True
+            AudColumn.EditFormSettings.Visible = True
+            AudColumn.VisibleIndex = "4"
+            AudColumn.EditFormSettings.VisibleIndex = "5"
             MultiGrid.Columns.Add(AudColumn)
 
             'Fixed Fee/Gain Share Column
