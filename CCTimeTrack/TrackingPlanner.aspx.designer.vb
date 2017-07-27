@@ -68,6 +68,15 @@ Partial Public Class TrackingPlanner
     Protected WithEvents btnBDReport As Global.DevExpress.Web.ASPxButton
 
     '''<summary>
+    '''btnCycleTimeReport control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnCycleTimeReport As Global.DevExpress.Web.ASPxButton
+
+    '''<summary>
     '''ChkBox control.
     '''</summary>
     '''<remarks>

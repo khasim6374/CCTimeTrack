@@ -15,7 +15,7 @@
         }
         .PullListUp2
         {
-            margin-top:-210px;
+            margin-top:-32px;
         }
         .MultiGridClass
         {
@@ -69,6 +69,7 @@
         <dx:ASPxButton ID="btnPipelineReport" runat="server" Text="Pipeline Report" AutoPostBack="false" OnClick="ExportToExcel" CustomParameter="Pipeline_Report"></dx:ASPxButton>
         <%--<dx:ASPxButton ID="btnAuditPlanned" runat="server" Text="Audits Planned" AutoPostBack="false"></dx:ASPxButton>--%>
         <dx:ASPxButton ID="btnBDReport" runat="server" Text="Audits By BD report" AutoPostBack="false" OnClick="ExportToExcel" CustomParameter="BD_Report"></dx:ASPxButton>
+        <dx:ASPxButton ID="btnCycleTimeReport" runat="server" Text="Cycle Time report" AutoPostBack="false" OnClick="ExportToExcel" CustomParameter="CT_Report"></dx:ASPxButton>
         
         <div class="tblHeadding">
             Tracking - Planner</div>
@@ -225,7 +226,7 @@ ORDER BY CC_Planning_History.StatusID">
                 <asp:Parameter Name="TrackingID" Type="Int32" />
             </SelectParameters>
         </asp:SqlDataSource>
-        <dx:ASPxGridView OnClientLayout="grid2_ClientLayout" CssClass="TopMargin" ID="grid2" ClientInstanceName="grid2" OnHeaderFilterFillItems="grid2_HeaderFilterFillItems" OnCommandButtonInitialize="grid2_CommandButtonInitialize" SettingsEditing-EditFormColumnCount="5" runat="server" DataSourceID="SqlDataSource3" KeyFieldName="Id" OnAfterPerformCallback="grid2_AfterPerformCallback" OnStartRowEditing="grid2_StartRowEditing" OnCellEditorInitialize="grid2_CellEditorInitialize" Width="100%" EnableRowsCache="False" OnInitNewRow="grid2_InitNewRow">
+        <dx:ASPxGridView OnClientLayout="grid2_ClientLayout" CssClass="TopMargin" ID="grid2" ClientInstanceName="grid2" OnHeaderFilterFillItems="grid2_HeaderFilterFillItems" OnCommandButtonInitialize="grid2_CommandButtonInitialize" SettingsEditing-EditFormColumnCount="5" runat="server" DataSourceID="SqlDataSource3" KeyFieldName="Id" OnAfterPerformCallback="grid2_AfterPerformCallback" OnStartRowEditing="grid2_StartRowEditing" OnCellEditorInitialize="grid2_CellEditorInitialize" Width="100%" EnableRowsCache="False" OnInitNewRow="grid2_InitNewRow" OnRowUpdating="grid2_OnRowUpdating">
         <%--<ClientSideEvents CustomButtonClick="function(s, e) {if(e.buttonID == 'myButton3'){alert();grid2.AddNewRow();alert();}}" />--%>
         <ClientSideEvents EndCallback="OnEndCallBack2" BeginCallback="function(s,e){
             if(e.command=='UPDATEEDIT'){OnEndCallBack2(s,e);}}" CustomButtonClick="function(s, e) { if(e.buttonID == 'myButton'){ASPxHiddenField1.Set('index', e.visibleIndex);s.StartEditRow(e.visibleIndex);}}" />
@@ -297,7 +298,12 @@ ORDER BY CC_Planning_History.StatusID">
 	             if(grid2.GetEditor('StatusId').GetValue()=='24'){
 		            grid2.GetEditor('DDWriteupDate').SetValue(new Date());
 	             }
-	             clb.PerformCallback(s.GetValue())
+                 if(grid2.GetEditor('StatusId').GetValue()=='19'){
+                        TPclb.PerformCallback(s.GetValue());
+                        pcDDFailedReason.Show();
+	             }else{
+	                clb.PerformCallback(s.GetValue())
+                 }
 	             }" />
 	            </PropertiesComboBox>
 	            <EditFormCaptionStyle Font-Bold="True">
@@ -506,17 +512,18 @@ ORDER BY CC_Planning_History.StatusID">
                 <asp:Parameter Name="DDFailedReason" />
             </UpdateParameters>
     </asp:SqlDataSource>
-    <dx:ASPxGridView Width="99%" SettingsEditing-EditFormColumnCount="5" OnStartRowEditing="MultiGrid_StartRowEditing" OnCommandButtonInitialize="MultiGrid_CommandButtonInitialize" OnRowUpdating="MultiGrid_OnRowUpdating" CssClass="MultiGridClass" ID="MultiGrid" ClientInstanceName="MultiGrid" runat="server" AutoGenerateColumns="true" DataSourceID="DSMultiSource" KeyFieldName="Id" OnAfterPerformCallback="MultiGrid_AfterPerformCallback">
+    <dx:ASPxGridView OnClientLayout="MultiGrid_ClientLayout" Width="99%" SettingsEditing-EditFormColumnCount="5" OnStartRowEditing="MultiGrid_StartRowEditing" OnCommandButtonInitialize="MultiGrid_CommandButtonInitialize" OnRowUpdating="MultiGrid_OnRowUpdating" CssClass="MultiGridClass" ID="MultiGrid" ClientInstanceName="MultiGrid" runat="server" AutoGenerateColumns="true" DataSourceID="DSMultiSource" KeyFieldName="Id" OnAfterPerformCallback="MultiGrid_AfterPerformCallback" EnableRowsCache="False">
         <%--<Columns>
             
         </Columns>--%>
-        <ClientSideEvents CustomButtonClick="function(s, e) { if(e.buttonID == 'EditBtn'){hdnField.Set('index', e.visibleIndex);s.StartEditRow(e.visibleIndex);}}" />
+        <ClientSideEvents ColumnResized="function(s, e) { e.processOnServer = true; }" CustomButtonClick="function(s, e) { if(e.buttonID == 'EditBtn'){hdnField.Set('index', e.visibleIndex);s.StartEditRow(e.visibleIndex);}}" />
         <SettingsPager Mode="ShowAllRecords">
             </SettingsPager>
-            <SettingsBehavior ColumnResizeMode="Control" />
+            <SettingsBehavior ColumnResizeMode="NextColumn" />
             <SettingsEditing Mode="EditFormAndDisplayRow">
             </SettingsEditing>
             <Settings VerticalScrollBarMode="Visible" ShowFooter="True" ShowHeaderFilterButton="true" />
+            <SettingsCookies CookiesID="SaveViewState" Version="1" Enabled="true" StoreColumnsWidth="True" StoreColumnsVisiblePosition="true" />
             <SettingsText PopupEditFormCaption="Tracking - Planner" />
             <SettingsDataSecurity AllowInsert="True" />
             <Styles>
