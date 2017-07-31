@@ -7,8 +7,29 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="headerbar">
         <div class="tblHeadding">Timesheet</div>
+            
         <div class="tblHeadding" style="float:right;font-size: 14px;padding-right:10px;padding-top:3px;">
             <a href="Timesheetsummary.aspx">Summary</a>
+        </div>
+        <div style="margin-left:325px;">
+            <asp:SqlDataSource ID="DSOptions" runat="server" ConnectionString="<%$ ConnectionStrings:CCUpdate %>" SelectCommand=""></asp:SqlDataSource>
+            <dx:ASPxComboBox CssClass="timetrackButtons" ID="cbOptions" runat="server" ValueType="System.String" DropDownStyle="DropDownList" AutoPostBack="true" OnSelectedIndexChanged="cbOptions_SelectedIndexChanged">
+                <Items>
+                    <dx:ListEditItem Value="Select" Text="---Select---" Selected="True" />
+                    <dx:ListEditItem Value="Project" Text="Project" />
+                    <dx:ListEditItem Value="Task" Text="Task" />
+                    <dx:ListEditItem Value="Employee" Text="Employee" />
+                </Items>
+            </dx:ASPxComboBox>
+            <dx:ASPxComboBox CssClass="timetrackButtons" ID="cbMultiOptions" runat="server" ValueType="System.String" DropDownStyle="DropDownList" DataSourceID="DSOptions" AutoPostBack="true" NullText="---Select---" OnSelectedIndexChanged="cbMultiOptions_SelectedIndexChanged"></dx:ASPxComboBox>
+            <dx:ASPxDateEdit CssClass="timetrackButtons" ID="dtStartdate" runat="server" NullText="Start Date">
+            </dx:ASPxDateEdit>
+            <dx:ASPxDateEdit CssClass="timetrackButtons" ID="dtEnddate" runat="server" NullText="End Date">
+            </dx:ASPxDateEdit>
+            <dx:ASPxHyperLink runat="server" Text="Export" ID="hlExport" CssClass="LinkCursor">
+                <ClientSideEvents Click="function(s, e) { clb.PerformCallback(); }" />
+            </dx:ASPxHyperLink>
+            <dx:ASPxCallback ID="ASPxCallback1" runat="server" ClientInstanceName="clb" oncallback="ASPxCallback1_Callback"></dx:ASPxCallback>
         </div>
     </div>
     <div style="overflow: auto; clear: both" id="divmain">

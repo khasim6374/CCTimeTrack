@@ -140,7 +140,7 @@
             </SettingsPager>
             <Settings HorizontalScrollBarMode="Visible" VerticalScrollBarMode="Visible" ShowFilterBar="Visible" ShowFilterRow="True" ShowFilterRowMenu="True" ShowHeaderFilterButton="True" />
         </dx:ASPxGridView>
-        <asp:SqlDataSource ID="sqData" runat="server" ConnectionString="<%$ ConnectionStrings:CCUpdate %>" SelectCommand="CCTrackingPlanner_sp" SelectCommandType="StoredProcedure">
+        <asp:SqlDataSource ID="sqData" runat="server" ConnectionString="<%$ ConnectionStrings:CCUpdate %>" SelectCommand="CCTrackingPlannerReport_sp" SelectCommandType="StoredProcedure">
             <SelectParameters>
                 <asp:Parameter Name="userid" Type="string" />
             </SelectParameters>

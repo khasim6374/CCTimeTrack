@@ -11,11 +11,11 @@
         }
         .PullListUp
         {
-            margin-top:-60px;
+            margin-top:-32px;
         }
         .PullListUp2
         {
-            margin-top:-210px;
+            margin-top:-32px;
         }
         .MultiGridClass
         {
@@ -69,6 +69,7 @@
         <dx:ASPxButton ID="btnPipelineReport" runat="server" Text="Pipeline Report" AutoPostBack="false" OnClick="ExportToExcel" CustomParameter="Pipeline_Report"></dx:ASPxButton>
         <%--<dx:ASPxButton ID="btnAuditPlanned" runat="server" Text="Audits Planned" AutoPostBack="false"></dx:ASPxButton>--%>
         <dx:ASPxButton ID="btnBDReport" runat="server" Text="Audits By BD report" AutoPostBack="false" OnClick="ExportToExcel" CustomParameter="BD_Report"></dx:ASPxButton>
+        <dx:ASPxButton ID="btnCycleTimeReport" runat="server" Text="Cycle Time report" AutoPostBack="false" OnClick="ExportToExcel" CustomParameter="CT_Report"></dx:ASPxButton>
         
         <div class="tblHeadding">
             Tracking - Planner</div>
@@ -225,64 +226,64 @@ ORDER BY CC_Planning_History.StatusID">
                 <asp:Parameter Name="TrackingID" Type="Int32" />
             </SelectParameters>
         </asp:SqlDataSource>
-        <dx:ASPxGridView OnClientLayout="grid2_ClientLayout" CssClass="TopMargin" ID="grid2" ClientInstanceName="grid2" OnHeaderFilterFillItems="grid2_HeaderFilterFillItems" OnCommandButtonInitialize="grid2_CommandButtonInitialize" SettingsEditing-EditFormColumnCount="5" runat="server" DataSourceID="SqlDataSource3" KeyFieldName="Id" OnAfterPerformCallback="grid2_AfterPerformCallback" OnStartRowEditing="grid2_StartRowEditing" OnCellEditorInitialize="grid2_CellEditorInitialize" Width="100%" EnableRowsCache="False" OnInitNewRow="grid2_InitNewRow">
+        <dx:ASPxGridView OnClientLayout="grid2_ClientLayout" CssClass="TopMargin" ID="grid2" ClientInstanceName="grid2" OnHeaderFilterFillItems="grid2_HeaderFilterFillItems" OnCommandButtonInitialize="grid2_CommandButtonInitialize" SettingsEditing-EditFormColumnCount="5" runat="server" DataSourceID="SqlDataSource3" KeyFieldName="Id" OnAfterPerformCallback="grid2_AfterPerformCallback" OnStartRowEditing="grid2_StartRowEditing" OnCellEditorInitialize="grid2_CellEditorInitialize" Width="100%" EnableRowsCache="False" OnInitNewRow="grid2_InitNewRow" OnRowUpdating="grid2_OnRowUpdating">
         <%--<ClientSideEvents CustomButtonClick="function(s, e) {if(e.buttonID == 'myButton3'){alert();grid2.AddNewRow();alert();}}" />--%>
         <ClientSideEvents EndCallback="OnEndCallBack2" BeginCallback="function(s,e){
             if(e.command=='UPDATEEDIT'){OnEndCallBack2(s,e);}}" CustomButtonClick="function(s, e) { if(e.buttonID == 'myButton'){ASPxHiddenField1.Set('index', e.visibleIndex);s.StartEditRow(e.visibleIndex);}}" />
         <Columns>
-            <dx:GridViewCommandColumn ShowDeleteButton="true" Caption=" ">
+            <dx:GridViewCommandColumn ShowDeleteButton="true" Caption=" " VisibleIndex="0">
             </dx:GridViewCommandColumn>
-            <dx:GridViewCommandColumn ShowNewButtonInHeader="true" Caption=" ">
+            <dx:GridViewCommandColumn ShowNewButtonInHeader="true" Caption=" " VisibleIndex="1">
                 <CustomButtons>
                         <dx:GridViewCommandColumnCustomButton ID="myButton" Text="Edit">
                         </dx:GridViewCommandColumnCustomButton>
                     </CustomButtons>
             </dx:GridViewCommandColumn>
-            <dx:GridViewDataComboBoxColumn Caption="Client" FieldName="Clientid" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
+            <dx:GridViewDataComboBoxColumn Visible="True" VisibleIndex="2" Caption="Client" FieldName="Clientid" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
                 <PropertiesComboBox DataSourceID="SqlDataSource5" TextField="ClientName" ValueField="Clientid">
                 </PropertiesComboBox>
                 <EditFormCaptionStyle Font-Bold="True">
                 </EditFormCaptionStyle>
-                <EditFormSettings ColumnSpan="2" />
+                <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="0" />
                 <Settings AllowAutoFilter="Default" AllowSort="True" SortMode="DisplayText" />
             </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn Caption="Supplier" FieldName="SupplierId" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
+            <dx:GridViewDataComboBoxColumn Visible="True" VisibleIndex="3" Caption="Supplier" FieldName="SupplierId" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
                 <PropertiesComboBox DataSourceID="SqlDataSource6" TextField="supplierName" ValueField="SupplierId">
                 </PropertiesComboBox>
                 <EditFormCaptionStyle Font-Bold="True">
                 </EditFormCaptionStyle>
-                <EditFormSettings ColumnSpan="2" />
+                <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="1" />
                 <Settings AllowAutoFilter="Default" AllowSort="True" SortMode="DisplayText" />
             </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn Caption="Auditor" FieldName="Auditor" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
+            <dx:GridViewDataComboBoxColumn Visible="True" VisibleIndex="4" Caption="Auditor" FieldName="Auditor" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
 	            <PropertiesComboBox DataSourceID="SqlDataSource8" TextField="Employee" ValueField="Employee">
 	            </PropertiesComboBox>
 	            <EditFormCaptionStyle Font-Bold="True">
 	            </EditFormCaptionStyle>
-	            <EditFormSettings ColumnSpan="2" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="5" />
 	            <Settings AllowHeaderFilter="False" />
             </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn Caption="Planner" FieldName="Planner" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
+            <dx:GridViewDataComboBoxColumn Visible="True" VisibleIndex="5" Caption="Planner" FieldName="Planner" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
 	            <PropertiesComboBox DataSourceID="SqlDataSource7" TextField="Employee" ValueField="Employee">
 	            </PropertiesComboBox>
 	            <EditFormCaptionStyle Font-Bold="True">
 	            </EditFormCaptionStyle>
-	            <EditFormSettings ColumnSpan="2" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="6" />
             </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataTextColumn Caption="DD Lead" FieldName="DDLead">
+            <dx:GridViewDataTextColumn Visible="True" VisibleIndex="6" Caption="DD Lead" FieldName="DDLead">
 	            <PropertiesTextEdit DisplayFormatInEditMode="True" DisplayFormatString="C2">
 	            </PropertiesTextEdit>
-	            <EditFormSettings ColumnSpan="2" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="7" />
 	            <Settings AllowHeaderFilter="False" />
             </dx:GridViewDataTextColumn>
-            <dx:GridViewDataTextColumn Caption="DD Spend" FieldName="DDSpend">
+            <dx:GridViewDataTextColumn Caption="DD Spend" FieldName="DDSpend" Visible="True" VisibleIndex="6">
 	            <PropertiesTextEdit DisplayFormatInEditMode="True" DisplayFormatString="C2">
 	            </PropertiesTextEdit>
-	            <EditFormSettings ColumnSpan="2" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="3" />
 	            <Settings AllowHeaderFilter="False" />
             </dx:GridViewDataTextColumn>
 
-            <dx:GridViewDataComboBoxColumn Caption="Planning Status" FieldName="StatusId" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
+            <dx:GridViewDataComboBoxColumn Visible="True" VisibleIndex="7" Caption="Planning Status" FieldName="StatusId" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
 	            <PropertiesComboBox DataSourceID="SqlDataSource4" TextField="Status" ValueField="StatusId">
 	             <ClientSideEvents SelectedIndexChanged="function(s, e) {
 	             if(grid2.GetEditor('StatusId').GetValue()=='10'){
@@ -297,69 +298,74 @@ ORDER BY CC_Planning_History.StatusID">
 	             if(grid2.GetEditor('StatusId').GetValue()=='24'){
 		            grid2.GetEditor('DDWriteupDate').SetValue(new Date());
 	             }
-	             clb.PerformCallback(s.GetValue())
+                 if(grid2.GetEditor('StatusId').GetValue()=='19'){
+                        TPclb.PerformCallback(s.GetValue());
+                        pcDDFailedReason.Show();
+	             }else{
+	                clb.PerformCallback(s.GetValue())
+                 }
 	             }" />
 	            </PropertiesComboBox>
 	            <EditFormCaptionStyle Font-Bold="True">
 	            </EditFormCaptionStyle>
-	            <EditFormSettings ColumnSpan="2" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="8" />
             </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataDateColumn FieldName="NotificationLetterDate" ShowInCustomizationForm="True">
+            <dx:GridViewDataDateColumn Visible="True" VisibleIndex="9" FieldName="NotificationLetterDate" ShowInCustomizationForm="True">
 	            <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormatString="MM/dd/yyyy"></PropertiesDateEdit>
-	            <EditFormSettings ColumnSpan="2" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="12" />
             </dx:GridViewDataDateColumn>
             <dx:GridViewDataDateColumn FieldName="ContractReceiptDate" ShowInCustomizationForm="True" Visible="False">
 	            <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
-	            <EditFormSettings ColumnSpan="2" Visible="True" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="9" />
             </dx:GridViewDataDateColumn>
             
             <dx:GridViewDataDateColumn FieldName="COQDate" ShowInCustomizationForm="True" Visible="False">
 	            <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
-	            <EditFormSettings ColumnSpan="2" Visible="True" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="11" />
             </dx:GridViewDataDateColumn>
-            <dx:GridViewDataDateColumn Caption="Kick Off Date" FieldName="scheduleddate" ShowInCustomizationForm="True">
+            <dx:GridViewDataDateColumn Visible="True" VisibleIndex="10" Caption="Kick Off Date" FieldName="scheduleddate" ShowInCustomizationForm="True">
 	            <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
-	            <EditFormSettings ColumnSpan="2" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="16" />
 	            <Settings AllowHeaderFilter="False" />
             </dx:GridViewDataDateColumn>
             <dx:GridViewDataDateColumn FieldName="Data_Received_Date" Caption="Data Received Date" ShowInCustomizationForm="True" Visible="False">
 	            <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
-	            <EditFormSettings ColumnSpan="2" Visible="True" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="13" />
             </dx:GridViewDataDateColumn>
 
-            <dx:GridViewDataComboBoxColumn Caption="Lead Planner" FieldName="LeadPlanner" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
+            <dx:GridViewDataComboBoxColumn Visible="True" VisibleIndex="11" Caption="Lead Planner" FieldName="LeadPlanner" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
 	            <PropertiesComboBox DataSourceID="SqlDataSource7" TextField="Employee" ValueField="Employee">
 	            </PropertiesComboBox>
 	            <EditFormCaptionStyle Font-Bold="True">
 	            </EditFormCaptionStyle>
-	            <EditFormSettings ColumnSpan="2" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="4" />
             </dx:GridViewDataComboBoxColumn>
-            <dx:GridViewDataComboBoxColumn Caption="Fixed Fee/Gain Share" FieldName="Type">
+            <dx:GridViewDataComboBoxColumn Caption="Fixed Fee/Gain Share" FieldName="Type" Visible="True" VisibleIndex="12">
 	            <PropertiesComboBox TextField="" ValueField="">
 		            <Items>
 			            <dx:ListEditItem Text="Gain Share" Value="Gain Share" />
 			            <dx:ListEditItem Text="Fixed Fee" Value="Fixed Fee" />
 		            </Items>
 	            </PropertiesComboBox>
-	            <EditFormSettings ColumnSpan="2" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="2" />
 	            <Settings AllowHeaderFilter="False" />
             </dx:GridViewDataComboBoxColumn>
             <dx:GridViewDataDateColumn FieldName="DDWriteupDate" ShowInCustomizationForm="True" Visible="False">
 	            <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
-	            <EditFormSettings ColumnSpan="2" Visible="True" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="10" />
             </dx:GridViewDataDateColumn>
 
             <dx:GridViewDataDateColumn FieldName="SampleSend" Caption="Sample Issued Date" Visible="False" ShowInCustomizationForm="True">
 	            <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
-	            <EditFormSettings ColumnSpan="2" Visible="True" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="15" />
             </dx:GridViewDataDateColumn>
             <dx:GridViewDataDateColumn FieldName="SampleApprovaldate" Caption="Sample Approved Date" Visible="False" ShowInCustomizationForm="True">
 	            <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
-	            <EditFormSettings ColumnSpan="2" Visible="True" />
+	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="14" />
             </dx:GridViewDataDateColumn>
 
             <dx:GridViewDataTextColumn Visible="False">
-	             <EditFormSettings Visible="True" RowSpan="9" />
+	             <EditFormSettings Visible="True" RowSpan="9" VisibleIndex="3" />
 	             <EditItemTemplate>
 		            <dx:ASPxListBox ID="ASPxListBox1" runat="server" DataSourceID="SqlDSHistoryList"
 			             ValueField="TrackingID" ValueType="System.Int32" Height="220px" CssClass="PullListUp" ItemStyle-Border-BorderColor="White" ItemStyle-Border-BorderStyle="None" Border-BorderStyle="Solid" CaptionCellStyle-BackColor="#DCDCDC" Border-BorderColor="Blue">
@@ -506,17 +512,19 @@ ORDER BY CC_Planning_History.StatusID">
                 <asp:Parameter Name="DDFailedReason" />
             </UpdateParameters>
     </asp:SqlDataSource>
-    <dx:ASPxGridView Width="99%" SettingsEditing-EditFormColumnCount="5" OnStartRowEditing="MultiGrid_StartRowEditing" OnCommandButtonInitialize="MultiGrid_CommandButtonInitialize" OnRowUpdating="MultiGrid_OnRowUpdating" CssClass="MultiGridClass" ID="MultiGrid" ClientInstanceName="MultiGrid" runat="server" AutoGenerateColumns="true" DataSourceID="DSMultiSource" KeyFieldName="Id" OnAfterPerformCallback="MultiGrid_AfterPerformCallback">
+    <dx:ASPxGridView OnClientLayout="MultiGrid_ClientLayout" Width="99%" SettingsEditing-EditFormColumnCount="5" OnStartRowEditing="MultiGrid_StartRowEditing" OnCommandButtonInitialize="MultiGrid_CommandButtonInitialize" OnRowUpdating="MultiGrid_OnRowUpdating" CssClass="MultiGridClass" ID="MultiGrid" ClientInstanceName="MultiGrid" runat="server" AutoGenerateColumns="true" DataSourceID="DSMultiSource" KeyFieldName="Id" OnAfterPerformCallback="MultiGrid_AfterPerformCallback" EnableRowsCache="False">
         <%--<Columns>
             
         </Columns>--%>
         <ClientSideEvents CustomButtonClick="function(s, e) { if(e.buttonID == 'EditBtn'){hdnField.Set('index', e.visibleIndex);s.StartEditRow(e.visibleIndex);}}" />
         <SettingsPager Mode="ShowAllRecords">
             </SettingsPager>
-            <SettingsBehavior ColumnResizeMode="Control" />
+            <SettingsBehavior ColumnResizeMode="NextColumn" />
+            <ClientSideEvents ColumnResized="function(s, e) { e.processOnServer = true; }" />
             <SettingsEditing Mode="EditFormAndDisplayRow">
             </SettingsEditing>
             <Settings VerticalScrollBarMode="Visible" ShowFooter="True" ShowHeaderFilterButton="true" />
+            <SettingsCookies CookiesID="SaveViewState1" Version="2" Enabled="true" StoreColumnsWidth="True" StoreColumnsVisiblePosition="true" />
             <SettingsText PopupEditFormCaption="Tracking - Planner" />
             <SettingsDataSecurity AllowInsert="True" />
             <Styles>

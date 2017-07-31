@@ -70,6 +70,14 @@ btnBDReport control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:CCTimeTrack.TrackingPlanner.btnCycleTimeReport">
+	<summary>
+btnCycleTimeReport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:CCTimeTrack.TrackingPlanner.ChkBox">
 	<summary>
 ChkBox control.
@@ -409,6 +417,62 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:CCTimeTrack.Timesheetsummary.GridView1">
 	<summary>
 GridView1 control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.timetrack.DSOptions">
+	<summary>
+DSOptions control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.timetrack.cbOptions">
+	<summary>
+cbOptions control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.timetrack.cbMultiOptions">
+	<summary>
+cbMultiOptions control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.timetrack.dtStartdate">
+	<summary>
+dtStartdate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.timetrack.dtEnddate">
+	<summary>
+dtEnddate control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.timetrack.hlExport">
+	<summary>
+hlExport control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.timetrack.ASPxCallback1">
+	<summary>
+ASPxCallback1 control.
 </summary>
 	<remarks>
 Auto-generated field.

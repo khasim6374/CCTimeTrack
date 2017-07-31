@@ -516,14 +516,15 @@ ORDER BY CC_Planning_History.StatusID">
         <%--<Columns>
             
         </Columns>--%>
-        <ClientSideEvents ColumnResized="function(s, e) { e.processOnServer = true; }" CustomButtonClick="function(s, e) { if(e.buttonID == 'EditBtn'){hdnField.Set('index', e.visibleIndex);s.StartEditRow(e.visibleIndex);}}" />
+        <ClientSideEvents CustomButtonClick="function(s, e) { if(e.buttonID == 'EditBtn'){hdnField.Set('index', e.visibleIndex);s.StartEditRow(e.visibleIndex);}}" />
         <SettingsPager Mode="ShowAllRecords">
             </SettingsPager>
             <SettingsBehavior ColumnResizeMode="NextColumn" />
+            <ClientSideEvents ColumnResized="function(s, e) { e.processOnServer = true; }" />
             <SettingsEditing Mode="EditFormAndDisplayRow">
             </SettingsEditing>
             <Settings VerticalScrollBarMode="Visible" ShowFooter="True" ShowHeaderFilterButton="true" />
-            <SettingsCookies CookiesID="SaveViewState" Version="1" Enabled="true" StoreColumnsWidth="True" StoreColumnsVisiblePosition="true" />
+            <SettingsCookies CookiesID="SaveViewState1" Version="2" Enabled="true" StoreColumnsWidth="True" StoreColumnsVisiblePosition="true" />
             <SettingsText PopupEditFormCaption="Tracking - Planner" />
             <SettingsDataSecurity AllowInsert="True" />
             <Styles>

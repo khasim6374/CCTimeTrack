@@ -14,6 +14,69 @@ Option Explicit On
 Partial Public Class timetrack
 
     '''<summary>
+    '''DSOptions control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents DSOptions As Global.System.Web.UI.WebControls.SqlDataSource
+
+    '''<summary>
+    '''cbOptions control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents cbOptions As Global.DevExpress.Web.ASPxComboBox
+
+    '''<summary>
+    '''cbMultiOptions control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents cbMultiOptions As Global.DevExpress.Web.ASPxComboBox
+
+    '''<summary>
+    '''dtStartdate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents dtStartdate As Global.DevExpress.Web.ASPxDateEdit
+
+    '''<summary>
+    '''dtEnddate control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents dtEnddate As Global.DevExpress.Web.ASPxDateEdit
+
+    '''<summary>
+    '''hlExport control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents hlExport As Global.DevExpress.Web.ASPxHyperLink
+
+    '''<summary>
+    '''ASPxCallback1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ASPxCallback1 As Global.DevExpress.Web.ASPxCallback
+
+    '''<summary>
     '''gridTimesheet control.
     '''</summary>
     '''<remarks>

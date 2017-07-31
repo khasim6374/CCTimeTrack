@@ -19,10 +19,10 @@ Partial Class TrackingPlanner
     Protected Sub MultiGrid_ClientLayout(sender As Object, e As ASPxClientLayoutArgs)
         'If btnDueDiligence.Border.BorderColor = System.Drawing.Color.DarkOrange Then
         If e.LayoutMode = ClientLayoutMode.Loading Then
-            Session("TPMainLayout") = MultiGrid.SaveClientLayout()
+            Session("TPMainLayout1") = MultiGrid.SaveClientLayout()
         End If
-        If Not String.IsNullOrEmpty(Session("TPMainLayout")) Then
-            MultiGrid.LoadClientLayout(Session("TPMainLayout").ToString())
+        If Not String.IsNullOrEmpty(Session("TPMainLayout1")) Then
+            MultiGrid.LoadClientLayout(Session("TPMainLayout1").ToString())
         End If
         'End If
     End Sub
