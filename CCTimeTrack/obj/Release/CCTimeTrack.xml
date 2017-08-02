@@ -6,7 +6,39 @@ CCTimeTrack
 </name>
 </assembly>
 <members>
-<member name="F:CCTimeTrack.Login.RegisterHyperLink">
+<member name="F:CCTimeTrack.SupplierRank.ClientMasterDS">
+	<summary>
+ClientMasterDS control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.SupplierRank.SupplierRankDS">
+	<summary>
+SupplierRankDS control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.SupplierRank.grid">
+	<summary>
+grid control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.SupplierRank.myButton">
+	<summary>
+myButton control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.Login.RegisterHyperLink">
 	<summary>
 RegisterHyperLink control.
 </summary>

@@ -66,6 +66,9 @@
                                         <div class="menu">
                                             <a href="TrackingPlanner.aspx">Tracking - Planner</a>
                                         </div>
+                                        <div class="menu">
+                                            <a href="SupplierRank.aspx">Supplier Rank</a>
+                                        </div>
                                          <div class="menu">
                                             <a href="historicreview.aspx">Historic Reviews</a>
                                         </div>
