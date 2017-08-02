@@ -79,13 +79,13 @@ Public Class timetrack
         End If
         If index = "1" Then
             DSOptions.SelectCommand = "SELECT ProjectId,Project FROM Projects WHERE (Act_Inact_ind = N'A') ORDER BY Project"
-            cbMultiOptions.ValueField = "Project"
+            cbMultiOptions.ValueField = "ProjectId"
             cbMultiOptions.TextField = "Project"
             'cbMultiOptions.Visible = True
         End If
         If index = "2" Then
             DSOptions.SelectCommand = "SELECT TaskId,Task FROM Tasks ORDER BY Task"
-            cbMultiOptions.ValueField = "Task"
+            cbMultiOptions.ValueField = "TaskId"
             cbMultiOptions.TextField = "Task"
             'cbMultiOptions.Visible = True
         End If
@@ -114,7 +114,14 @@ Public Class timetrack
             .ConfigurationManager.ConnectionStrings("CCUpdate").ConnectionString
         Dim con As New SqlConnection(strConnString)
         Dim sda As New SqlDataAdapter()
-        cmd.CommandType = CommandType.Text
+        cmd.CommandType = CommandType.StoredProcedure
+
+
+        cmd.Parameters.Add("@source", SqlDbType.VarChar).Value = cbOptions.Value
+        cmd.Parameters.Add("@sourceid", SqlDbType.VarChar).Value = cbMultiOptions.Value
+        cmd.Parameters.Add("@startdate", SqlDbType.DateTime).Value = dtStartdate.Value
+        cmd.Parameters.Add("@enddate", SqlDbType.DateTime).Value = dtEnddate.Value
+
         cmd.Connection = con
         Try
             con.Open()
@@ -130,8 +137,13 @@ Public Class timetrack
         End Try
     End Function
 
-    Protected Sub ASPxCallback1_Callback(source As Object, e As CallbackEventArgs)
-        Dim cmd As New SqlCommand("TTNew_Report")
+    Protected Sub ExportToExcel(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnExport.Click
+        'Get the data from database into datatable
+        Dim lnk As ASPxButton = TryCast(sender, ASPxButton)
+        Dim Value1 As [String] = lnk.Attributes("CustomParameter").ToString()
+        Dim strQuery As String = Value1
+        Dim cmd As New SqlCommand(strQuery)
+        'cmd.CommandType = CommandType.StoredProcedure
         Dim dt As DataTable = GetData(cmd)
 
         'Create a dummy GridView
@@ -143,7 +155,7 @@ Public Class timetrack
         Response.Clear()
         Response.Buffer = True
         Response.AddHeader("content-disposition", _
-             "attachment;filename=TTNew_Report.xls")
+             "attachment;filename=" + Value1 + ".xls")
         Response.Charset = ""
         Response.ContentType = "application/vnd.ms-excel"
         Dim sw As New StringWriter()
@@ -161,5 +173,12 @@ Public Class timetrack
         Response.Output.Write(sw.ToString())
         Response.Flush()
         Response.End()
+    End Sub
+
+    Protected Sub btnExport_Init(ByVal sender As Object, ByVal e As EventArgs)
+        Dim btn As ASPxButton = CType(sender, ASPxButton)
+        btn.CssFilePath = String.Empty
+        btn.CssPostfix = String.Empty
+        btn.SpriteCssFilePath = String.Empty
     End Sub
 End Class

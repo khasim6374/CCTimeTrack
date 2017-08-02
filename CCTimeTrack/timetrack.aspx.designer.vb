@@ -59,22 +59,13 @@ Partial Public Class timetrack
     Protected WithEvents dtEnddate As Global.DevExpress.Web.ASPxDateEdit
 
     '''<summary>
-    '''hlExport control.
+    '''btnExport control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents hlExport As Global.DevExpress.Web.ASPxHyperLink
-
-    '''<summary>
-    '''ASPxCallback1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ASPxCallback1 As Global.DevExpress.Web.ASPxCallback
+    Protected WithEvents btnExport As Global.DevExpress.Web.ASPxButton
 
     '''<summary>
     '''gridTimesheet control.

@@ -11,7 +11,7 @@
         <div class="tblHeadding" style="float:right;font-size: 14px;padding-right:10px;padding-top:3px;">
             <a href="Timesheetsummary.aspx">Summary</a>
         </div>
-        <div style="margin-left:325px;">
+        <div style="margin-left:300px;">
             <asp:SqlDataSource ID="DSOptions" runat="server" ConnectionString="<%$ ConnectionStrings:CCUpdate %>" SelectCommand=""></asp:SqlDataSource>
             <dx:ASPxComboBox CssClass="timetrackButtons" ID="cbOptions" runat="server" ValueType="System.String" DropDownStyle="DropDownList" AutoPostBack="true" OnSelectedIndexChanged="cbOptions_SelectedIndexChanged">
                 <Items>
@@ -26,10 +26,7 @@
             </dx:ASPxDateEdit>
             <dx:ASPxDateEdit CssClass="timetrackButtons" ID="dtEnddate" runat="server" NullText="End Date">
             </dx:ASPxDateEdit>
-            <dx:ASPxHyperLink runat="server" Text="Export" ID="hlExport" CssClass="LinkCursor">
-                <ClientSideEvents Click="function(s, e) { clb.PerformCallback(); }" />
-            </dx:ASPxHyperLink>
-            <dx:ASPxCallback ID="ASPxCallback1" runat="server" ClientInstanceName="clb" oncallback="ASPxCallback1_Callback"></dx:ASPxCallback>
+            <dx:ASPxButton CssClass="LinkCursor" BorderBottom-BorderColor="#5D7B9D" BorderBottom-BorderWidth="3" ID="btnExport" runat="server" Cursor="pointer" EnableDefaultAppearance="false" Font-Underline="true" ForeColor="Blue" Text="Export" OnInit="btnExport_Init" AutoPostBack="false" OnClick="ExportToExcel" CustomParameter="TTNew_Report"></dx:ASPxButton>
         </div>
     </div>
     <div style="overflow: auto; clear: both" id="divmain">

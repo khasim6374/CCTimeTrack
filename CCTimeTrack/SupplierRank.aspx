@@ -70,7 +70,7 @@
                 <asp:Parameter Name="Id" Type="Int32" />
             </DeleteParameters>
         </asp:SqlDataSource>
-        <dx:ASPxGridView runat="server" ID="grid" OnRowUpdating="grid_OnRowUpdating" OnRowInserting="grid_OnRowInserting" SettingsEditing-EditFormColumnCount="4" ClientInstanceName="grid" AutoGenerateColumns="False" DataSourceID="SupplierRankDS" KeyFieldName="ID" Width="100%" >
+        <dx:ASPxGridView runat="server" ID="grid" OnRowUpdating="grid_OnRowUpdating" OnRowInserting="grid_OnRowInserting" SettingsEditing-EditFormColumnCount="4" ClientInstanceName="grid" AutoGenerateColumns="False" DataSourceID="SupplierRankDS" KeyFieldName="ID" Width="100%">
             <ClientSideEvents CustomButtonClick="function(s, e) { if(e.buttonID == 'myButton'){ s.StartEditRow(e.visibleIndex); } }" />
             <Columns>
                 <dx:GridViewCommandColumn ShowDeleteButton="true" Caption=" ">
@@ -146,5 +146,8 @@
                 </Header>
             </Styles>
         </dx:ASPxGridView>
+        <script type="text/javascript">
+            adjustSize();
+        </script>
     </div>
 </asp:Content>

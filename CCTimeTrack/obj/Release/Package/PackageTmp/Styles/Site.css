@@ -369,6 +369,11 @@ div.accountInfo {
 .LinkCursor
 {
     cursor:pointer;
-    font-size: 14px;
+    font-size: 11px;
     margin-left: 7px;
+    border-bottom-width: 0px !important;
+    font-weight:normal;
+    color:Black !important;
+    border-radius:8px;
+    margin-top: -8px;
 }
