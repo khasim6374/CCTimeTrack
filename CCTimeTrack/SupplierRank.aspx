@@ -40,7 +40,7 @@
         <asp:SqlDataSource ID="ClientMasterDS" runat="server" ConnectionString="<%$ ConnectionStrings:CCUpdate %>"
         SelectCommand="select * from CC_ClientMaster ORDER BY ClientName ASC"></asp:SqlDataSource>
         <asp:SqlDataSource ID="SupplierRankDS" runat="server" ConnectionString="<%$ ConnectionStrings:CCUpdate %>"
-            SelectCommand="select [Start Date] as StartDate,* from CC_SupplierRank" 
+            SelectCommand="select ID, ClientId, Replace(RIGHT(Location, CHARINDEX('\\', REVERSE(Location)) + 1), '#', '') as Location, [Start Date] as StartDate, EndDate, Crtd_user, Crd_date from CC_SupplierRank" 
             UpdateCommand="UPDATE CC_SupplierRank SET ClientId =@ClientId, 
                                     Location = @Location, 
                                     [Start Date] =@StartDate, 
@@ -87,6 +87,7 @@
                     <EditFormCaptionStyle Font-Bold="True">
                     </EditFormCaptionStyle>
                     <EditFormSettings ColumnSpan="2" />
+                    <Settings SortMode="DisplayText" />
                 </dx:GridViewDataComboBoxColumn>
                 <%--<dx:GridViewDataTextColumn Caption="Location" FieldName="Location">
 	                <EditFormSettings ColumnSpan="2" />
@@ -98,7 +99,7 @@
                     <CellStyle HorizontalAlign="left">
                     </CellStyle>
                 </dx:GridViewDataHyperLinkColumn>--%>
-                <dx:GridViewDataHyperLinkColumn runat="server" FieldName="Location" Caption="Location">
+                <dx:GridViewDataHyperLinkColumn runat="server" FieldName="Location" Caption="Location" EditFormSettings-ColumnSpan="2">
                     <DataItemTemplate>
                         <%--<asp:HyperLink runat="server" OnInit="hyperLink_Init">qwert</asp:HyperLink>--%>
                         <%--<asp:Button OnClick="hyperLink_Init" runat="server" CommandArgument='<%#Eval("Document")%>' />--%>
