@@ -239,37 +239,60 @@ Partial Class TrackingPlanner
                     c.Caption = "Contract Received Date"
                     c.EditFormSettings.Visible = True
                     c.EditFormSettings.VisibleIndex = "9"
+                    c.VisibleIndex = "7"
                 End If
                 If (c.FieldName.ToString()).StartsWith("DDWriteupDate") Then
                     c.Caption = "DD Write Up Completed"
                     c.EditFormSettings.Visible = True
+                    c.VisibleIndex = "8"
                     c.EditFormSettings.VisibleIndex = "10"
                 End If
                 If (c.FieldName.ToString()).StartsWith("Data_Received_Date") Then
                     c.Caption = "Data Received Date"
                     c.EditFormSettings.Visible = True
                     c.EditFormSettings.VisibleIndex = "13"
+                    If lnk.Text = "Planning" OrElse lnk.Text = "Hold" Then
+                        c.Visible = False
+                    End If
                 End If
                 If (c.FieldName.ToString()).StartsWith("ContractOwner") Then
                     c.Caption = "Contract Owner Questionnaire"
                     c.EditFormSettings.Visible = False
                     c.Visible = True
+                    If lnk.Text = "Due Diligence" Then
+                        c.Visible = False
+                    End If
                     c.EditFormSettings.VisibleIndex = "17"
                 End If
                 If (c.FieldName.ToString()).StartsWith("SampleSend") Then
                     c.Caption = "Sample Issued Date"
                     c.EditFormSettings.Visible = True
                     c.EditFormSettings.VisibleIndex = "15"
+                    If lnk.Text = "Planning" Then
+                        c.Visible = False
+                    End If
                 End If
                 If (c.FieldName.ToString()).StartsWith("NotificationLetterDate") Then
                     c.Caption = "NDR Date"
                     c.EditFormSettings.Visible = True
                     c.EditFormSettings.VisibleIndex = "12"
+                    If lnk.Text = "Planning" Then
+                        c.VisibleIndex = "6"
+                    End If
+                    If (lnk.Text = "Field Work / Settlement") Then
+                        c.VisibleIndex = "7"
+                    End If
+                    If (lnk.Text = "Hold") Then
+                        c.VisibleIndex = "8"
+                    End If
                 End If
                 If (c.FieldName.ToString()).StartsWith("SampleApprovaldate") Then
                     c.Caption = "Sample Approval Date"
                     c.EditFormSettings.Visible = True
                     c.EditFormSettings.VisibleIndex = "14"
+                    If lnk.Text = "Planning" Then
+                        c.Visible = False
+                    End If
                 End If
                 'If (c.FieldName.ToString()).StartsWith("SampleSend") Then
                 '    c.Caption = "Sample Sent Date"
@@ -278,7 +301,13 @@ Partial Class TrackingPlanner
                     c.Caption = "Kick-Off Date"
                     If lnk.Text = "Planning" Then
                         c.Visible = True
-                        c.VisibleIndex = "11"
+                        c.VisibleIndex = "7"
+                    End If
+                    If (lnk.Text = "Field Work / Settlement") Then
+                        c.VisibleIndex = "8"
+                    End If
+                    If (lnk.Text = "Hold") Then
+                        c.VisibleIndex = "9"
                     End If
                     'If lnk.Text = "Due Diligence" Then
                     '    c.Visible = False
@@ -303,6 +332,13 @@ Partial Class TrackingPlanner
                     c.EditFormSettings.Visible = True
                     c.EditFormSettings.VisibleIndex = "3"
                     c.Visible = False
+                End If
+                If (lnk.Text = "Field Work / Settlement") And (c.FieldName.ToString()).StartsWith("DDSpend") Then
+                    c.VisibleIndex = "9"
+                End If
+                If (lnk.Text = "Field Work / Settlement") And (c.FieldName.ToString()).StartsWith("Type") Then
+                    c.VisibleIndex = "10"
+                    c.Caption = "Fixed Fee/Gain Share"
                 End If
             End If
             If (c.FieldName.ToString()).StartsWith("Id") Then
@@ -340,7 +376,7 @@ Partial Class TrackingPlanner
                 If (c.FieldName.ToString()).StartsWith("scheduleddate") Then
                     c.Caption = "Kick-Off Date"
                     CType(MultiGrid.Columns(c.FieldName), GridViewDataColumn).Visible = DevExpress.Utils.DefaultBoolean.True
-                    CType(MultiGrid.Columns(c.FieldName), GridViewDataColumn).VisibleIndex = "11"
+                    CType(MultiGrid.Columns(c.FieldName), GridViewDataColumn).VisibleIndex = "7"
                 End If
                 If (c.FieldName.ToString()).StartsWith("DDWriteupDate") OrElse (c.FieldName.ToString()).StartsWith("ContractsReceived") Then
                     c.Visible = False
@@ -349,20 +385,34 @@ Partial Class TrackingPlanner
             End If
 
             If (c.FieldName.ToString()).StartsWith("Auditor") OrElse (c.FieldName.ToString()).StartsWith("COQDate") OrElse (c.FieldName.ToString()).StartsWith("NotificationLetterDate") OrElse (c.FieldName.ToString()).StartsWith("Data_Received_Date") OrElse (c.FieldName.ToString()).StartsWith("SampleApprovaldate") OrElse (c.FieldName.ToString()).StartsWith("SampleSend") Then
-                If lnk.Text = "Planning" And ((c.FieldName.ToString()).StartsWith("NotificationLetterDate") OrElse (c.FieldName.ToString()).StartsWith("Auditor") OrElse (c.FieldName.ToString()).StartsWith("SampleApprovaldate") OrElse (c.FieldName.ToString()).StartsWith("SampleSend")) Then
+                If lnk.Text = "Planning" And ((c.FieldName.ToString()).StartsWith("NotificationLetterDate") OrElse (c.FieldName.ToString()).StartsWith("Auditor")) Then
 
                 Else
                     c.Visible = False
+                    If (lnk.Text = "Field Work / Settlement") And ((c.FieldName.ToString()).StartsWith("Auditor") OrElse (c.FieldName.ToString()).StartsWith("NotificationLetterDate")) Then
+                        c.Visible = True
+                    End If
+                    If (lnk.Text = "Hold") And (c.FieldName.ToString()).StartsWith("NotificationLetterDate") Then
+                        c.Visible = True
+                        c.Caption = "NDR Date"
+                    End If
                     CType(MultiGrid.Columns(c.FieldName), GridViewDataColumn).EditFormSettings.Visible = DevExpress.Utils.DefaultBoolean.True
                     If c.FieldName = "COQDate" Then
                         CType(MultiGrid.Columns(c.FieldName), GridViewDataColumn).EditFormSettings.VisibleIndex = "11"
+                        CType(MultiGrid.Columns(c.FieldName), GridViewDataColumn).VisibleIndex = "9"
+                        If lnk.Text = "Planning" OrElse lnk.Text = "Hold" Then
+                            CType(MultiGrid.Columns(c.FieldName), GridViewDataColumn).Visible = False
+                        End If
                     End If
                     If c.FieldName = "NotificationLetterDate" Then
                         CType(MultiGrid.Columns(c.FieldName), GridViewDataColumn).EditFormSettings.VisibleIndex = "12"
                     End If
                     If c.FieldName = "Data_Received_Date" Then
-                        If lnk.Text <> "Due Diligence" Then
+                        If lnk.Text <> "Due Diligence" And lnk.Text <> "Hold" Then
                             CType(MultiGrid.Columns(c.FieldName), GridViewDataColumn).Visible = True
+                        End If
+                        If lnk.Text = "Planning" Then
+                            CType(MultiGrid.Columns(c.FieldName), GridViewDataColumn).Visible = False
                         End If
                         CType(MultiGrid.Columns(c.FieldName), GridViewDataColumn).EditFormSettings.VisibleIndex = "13"
                     End If
@@ -371,14 +421,23 @@ Partial Class TrackingPlanner
                     End If
                     If c.FieldName = "SampleSend" Then
                         CType(MultiGrid.Columns(c.FieldName), GridViewDataColumn).EditFormSettings.VisibleIndex = "15"
+                        If lnk.Text = "Planning" Then
+                            CType(MultiGrid.Columns(c.FieldName), GridViewDataColumn).Visible = False
+                        End If
                     End If
                 End If
             End If
-            If (c.FieldName.ToString()).StartsWith("Auditor") Then
+            If (c.FieldName.ToString()).StartsWith("Auditor") And lnk.Text <> "Field Work / Settlement" Then
                 c.Visible = False
                 CType(MultiGrid.Columns(c.FieldName), GridViewDataColumn).EditFormSettings.Visible = DevExpress.Utils.DefaultBoolean.False
             End If
             c.EditFormSettings.ColumnSpan = "2"
+
+            If (lnk.Text = "Field Work / Settlement") Then
+                If c.FieldName = "NotificationLetterDate" Then
+                    c.Caption = "NDR Date"
+                End If
+            End If
         Next c
         'Dim btn As New GridViewDataTextColumn()
         'btn.Visible = False
@@ -388,21 +447,21 @@ Partial Class TrackingPlanner
 
 
         'MultiGrid.ClientSideEvents.CustomButtonClick = "function(s, e) { MultiGrid.UpdateEdit(); }"
-        If lnk.Text = "Field Work / Settlement" Then
-            Dim ddspend As New GridViewDataTextColumn()
-            ddspend.PropertiesTextEdit.DisplayFormatInEditMode = True
-            ddspend.PropertiesTextEdit.DisplayFormatString = "C2"
-            ddspend.FieldName = "DDSpend"
-            MultiGrid.Columns.Add(ddspend)
-        End If
+        'If lnk.Text = "Field Work / Settlement" Then
+        '    Dim ddspend As New GridViewDataTextColumn()
+        '    ddspend.PropertiesTextEdit.DisplayFormatInEditMode = True
+        '    ddspend.PropertiesTextEdit.DisplayFormatString = "C2"
+        '    ddspend.FieldName = "DDSpend"
+        '    MultiGrid.Columns.Add(ddspend)
+        'End If
         If lnk.Text = "Hold" Then
             Dim AudColumn1 As New GridViewDataComboBoxColumn()
             AudColumn1.PropertiesComboBox.DataSourceID = "SqlDataSource8"
             AudColumn1.PropertiesComboBox.TextField = "Employee"
             AudColumn1.PropertiesComboBox.ValueField = "Employee"
             AudColumn1.FieldName = "Auditor"
-            AudColumn1.Visible = True
-            AudColumn1.EditFormSettings.Visible = True
+            AudColumn1.Visible = False
+            AudColumn1.EditFormSettings.Visible = DevExpress.Utils.DefaultBoolean.True
             AudColumn1.VisibleIndex = "4"
             AudColumn1.EditFormSettings.VisibleIndex = "5"
             AudColumn1.EditFormSettings.ColumnSpan = "2"
@@ -416,7 +475,7 @@ Partial Class TrackingPlanner
             StatusColumn.Caption = "Planning Status"
             'StatusColumn.PropertiesComboBox.ClientSideEvents.SelectedIndexChanged = "function(s, e){if(s.GetValue()=='12'){ TPclb.PerformCallback(s.GetValue()); }}"
             StatusColumn.PropertiesComboBox.ClientSideEvents.SelectedIndexChanged = "function(s, e){if(s.GetText()=='NDR Issued'){MultiGrid.GetEditor('NotificationLetterDate').SetValue(new Date());} if(s.GetValue()=='19'){TPclb.PerformCallback(s.GetValue());pcDDFailedReason.Show();}TPclb.PerformCallback(s.GetValue());}"
-            StatusColumn.VisibleIndex = 5
+            StatusColumn.VisibleIndex = 3
             StatusColumn.EditFormSettings.Visible = True
             StatusColumn.EditFormSettings.VisibleIndex = "8"
             StatusColumn.EditFormSettings.ColumnSpan = "2"
@@ -452,7 +511,7 @@ Partial Class TrackingPlanner
             LPColumn.PropertiesComboBox.ValueField = "Employee"
             LPColumn.FieldName = "LeadPlanner"
             LPColumn.Caption = "Lead Planner"
-            LPColumn.VisibleIndex = 3
+            LPColumn.VisibleIndex = 4
             LPColumn.EditFormSettings.Visible = True
             LPColumn.EditFormSettings.VisibleIndex = "4"
             LPColumn.EditFormSettings.ColumnSpan = "2"
@@ -464,7 +523,7 @@ Partial Class TrackingPlanner
             PColumn.PropertiesComboBox.ValueField = "Employee"
             PColumn.FieldName = "Planner"
             PColumn.Caption = "Planner"
-            PColumn.VisibleIndex = 4
+            PColumn.VisibleIndex = 5
             PColumn.EditFormSettings.Visible = True
             PColumn.EditFormSettings.VisibleIndex = "6"
             PColumn.EditFormSettings.ColumnSpan = "2"
@@ -474,7 +533,7 @@ Partial Class TrackingPlanner
             ddspend.PropertiesTextEdit.DisplayFormatInEditMode = True
             ddspend.PropertiesTextEdit.DisplayFormatString = "C2"
             ddspend.FieldName = "DDSpend"
-            ddspend.VisibleIndex = 5
+            ddspend.VisibleIndex = 10
             ddspend.EditFormSettings.Visible = True
             ddspend.EditFormSettings.VisibleIndex = "3"
             ddspend.EditFormSettings.ColumnSpan = "2"
@@ -487,7 +546,7 @@ Partial Class TrackingPlanner
             FixedGainCol.PropertiesComboBox.Items.Add("Gain Share")
             FixedGainCol.PropertiesComboBox.Items.Add("Fixed Fee")
             FixedGainCol.FieldName = "Type"
-            FixedGainCol.VisibleIndex = 9
+            FixedGainCol.VisibleIndex = 11
             FixedGainCol.EditFormSettings.Visible = True
             FixedGainCol.EditFormSettings.VisibleIndex = "2"
             FixedGainCol.Caption = "Fixed Fee/Gain Share"
@@ -497,8 +556,9 @@ Partial Class TrackingPlanner
             Dim StatusDate As New GridViewDataDateColumn()
             StatusDate.FieldName = "StatusDate"
             StatusDate.Caption = "On Hold Date"
-            StatusDate.VisibleIndex = 8
-            StatusDate.EditFormSettings.Visible = True
+            'StatusDate.VisibleIndex = 8
+            StatusDate.Visible = False
+            StatusDate.EditFormSettings.Visible = DevExpress.Utils.DefaultBoolean.True
             StatusDate.EditFormSettings.VisibleIndex = "17"
             StatusDate.EditFormSettings.ColumnSpan = "2"
             MultiGrid.Columns.Add(StatusDate)
@@ -527,11 +587,20 @@ Partial Class TrackingPlanner
             AudColumn.PropertiesComboBox.ValueField = "Employee"
             AudColumn.FieldName = "Auditor"
             AudColumn.EditFormSettings.ColumnSpan = "2"
-            AudColumn.Visible = True
-            AudColumn.EditFormSettings.Visible = True
+            AudColumn.Visible = False
+            'CType(MultiGrid.Columns("Auditor"), GridViewDataComboBoxColumn).EditFormSettings.Visible = DevExpress.Utils.DefaultBoolean.True
+            'CType(MultiGrid.Columns("Auditor"), GridViewDataComboBoxColumn).EditFormSettings.VisibleIndex = "5"
+            AudColumn.EditFormSettings.Visible = DevExpress.Utils.DefaultBoolean.True
             AudColumn.VisibleIndex = "4"
             AudColumn.EditFormSettings.VisibleIndex = "5"
             MultiGrid.Columns.Add(AudColumn)
+
+            If lnk.Text = "Due Diligence" Then
+                CType(MultiGrid.Columns("scheduleddate"), GridViewDataDateColumn).EditFormSettings.Visible = DevExpress.Utils.DefaultBoolean.True
+                CType(MultiGrid.Columns("scheduleddate"), GridViewDataDateColumn).Visible = DevExpress.Utils.DefaultBoolean.True
+                CType(MultiGrid.Columns("scheduleddate"), GridViewDataDateColumn).Caption = "Kick-Off Date"
+            End If
+
 
             'Fixed Fee/Gain Share Column
             Dim FixedGainCol1 As New GridViewDataComboBoxColumn()
@@ -542,8 +611,11 @@ Partial Class TrackingPlanner
             FixedGainCol1.FieldName = "Type"
             FixedGainCol1.EditFormSettings.Visible = True
             FixedGainCol1.EditFormSettings.VisibleIndex = "2"
-            FixedGainCol1.VisibleIndex = "10"
+            FixedGainCol1.VisibleIndex = "11"
             FixedGainCol1.Caption = "Fixed Fee/Gain Share"
+            If lnk.Text = "Planning" Then
+                FixedGainCol1.VisibleIndex = "9"
+            End If
             FixedGainCol1.EditFormSettings.ColumnSpan = "2"
             MultiGrid.Columns.Add(FixedGainCol1)
 
@@ -555,7 +627,7 @@ Partial Class TrackingPlanner
             StatusColumn.Caption = "Planning Status"
             'StatusColumn.PropertiesComboBox.ClientSideEvents.SelectedIndexChanged = "function(s, e){if(s.GetValue()=='12'){ TPclb.PerformCallback(s.GetValue()); }}"
             StatusColumn.PropertiesComboBox.ClientSideEvents.SelectedIndexChanged = "function(s, e){if(s.GetText()=='NDR Issued'){MultiGrid.GetEditor('NotificationLetterDate').SetValue(new Date());} if(s.GetValue()=='19'){TPclb.PerformCallback(s.GetValue());pcDDFailedReason.Show();}TPclb.PerformCallback(s.GetValue());}"
-            StatusColumn.VisibleIndex = 7
+            StatusColumn.VisibleIndex = 3
             StatusColumn.EditFormSettings.ColumnSpan = "2"
             StatusColumn.EditFormSettings.Visible = True
             StatusColumn.EditFormSettings.VisibleIndex = "8"
@@ -591,7 +663,7 @@ Partial Class TrackingPlanner
             LPColumn.PropertiesComboBox.ValueField = "Employee"
             LPColumn.FieldName = "LeadPlanner"
             LPColumn.Caption = "Lead Planner"
-            LPColumn.VisibleIndex = 3
+            LPColumn.VisibleIndex = 4
             LPColumn.EditFormSettings.Visible = True
             LPColumn.EditFormSettings.VisibleIndex = "4"
             LPColumn.EditFormSettings.ColumnSpan = "2"
@@ -603,7 +675,7 @@ Partial Class TrackingPlanner
             PColumn.PropertiesComboBox.ValueField = "Employee"
             PColumn.FieldName = "Planner"
             PColumn.Caption = "Planner"
-            PColumn.VisibleIndex = 4
+            PColumn.VisibleIndex = 5
             PColumn.EditFormSettings.Visible = True
             PColumn.EditFormSettings.VisibleIndex = "6"
             PColumn.EditFormSettings.ColumnSpan = "2"
@@ -617,6 +689,7 @@ Partial Class TrackingPlanner
             If lnk.Text = "Planning" Then
                 ddlead.Visible = False
             End If
+            ddlead.VisibleIndex = 6
             ddlead.EditFormSettings.Visible = True
             ddlead.EditFormSettings.VisibleIndex = "7"
             MultiGrid.Columns.Add(ddlead)
@@ -627,7 +700,11 @@ Partial Class TrackingPlanner
             ddspend.FieldName = "DDSpend"
             ddspend.EditFormSettings.Visible = True
             ddspend.EditFormSettings.VisibleIndex = "3"
+            ddspend.VisibleIndex = "10"
             ddspend.EditFormSettings.ColumnSpan = "2"
+            If lnk.Text = "Planning" Then
+                ddspend.VisibleIndex = "8"
+            End If
             MultiGrid.Columns.Add(ddspend)
 
             'If lnk.Text = "Due Diligence" Then
@@ -657,6 +734,7 @@ Partial Class TrackingPlanner
             ddlead.PropertiesTextEdit.DisplayFormatString = "C2"
             ddlead.FieldName = "DDLead"
             ddlead.EditFormSettings.Visible = True
+            ddlead.VisibleIndex = 6
             ddlead.EditFormSettings.VisibleIndex = "7"
             ddlead.EditFormSettings.ColumnSpan = "2"
             MultiGrid.Columns.Add(ddlead)

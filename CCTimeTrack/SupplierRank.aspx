@@ -40,7 +40,7 @@
         <asp:SqlDataSource ID="ClientMasterDS" runat="server" ConnectionString="<%$ ConnectionStrings:CCUpdate %>"
         SelectCommand="select * from CC_ClientMaster ORDER BY ClientName ASC"></asp:SqlDataSource>
         <asp:SqlDataSource ID="SupplierRankDS" runat="server" ConnectionString="<%$ ConnectionStrings:CCUpdate %>"
-            SelectCommand="select ID, ClientId, Replace(RIGHT(Location, CHARINDEX('\\', REVERSE(Location)) + 1), '#', '') as Location, [Start Date] as StartDate, EndDate, Crtd_user, Crd_date from CC_SupplierRank" 
+            SelectCommand="select ID,CC_ClientMaster.ClientName, CC_SupplierRank.ClientId, Replace(RIGHT(Location, CHARINDEX('\\', REVERSE(Location)) + 1), '#', '') as Location, [Start Date] as StartDate, EndDate, Crtd_user, Crd_date from CC_SupplierRank inner join CC_ClientMaster on CC_ClientMaster.ClientId = CC_SupplierRank.ClientId order by CC_ClientMaster.ClientName" 
             UpdateCommand="UPDATE CC_SupplierRank SET ClientId =@ClientId, 
                                     Location = @Location, 
                                     [Start Date] =@StartDate, 
