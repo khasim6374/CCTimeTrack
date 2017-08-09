@@ -301,12 +301,12 @@ Partial Class TrackingPlanner
                     c.Caption = "Kick-Off Date"
                     If lnk.Text = "Planning" Then
                         c.Visible = True
-                        c.VisibleIndex = "7"
+                        'c.VisibleIndex = "7"
                     End If
                     If (lnk.Text = "Field Work / Settlement") Then
                         c.VisibleIndex = "8"
                     End If
-                    If (lnk.Text = "Hold") Then
+                    If lnk.Text = "Hold" Then
                         c.VisibleIndex = "9"
                     End If
                     'If lnk.Text = "Due Diligence" Then
@@ -533,7 +533,7 @@ Partial Class TrackingPlanner
             ddspend.PropertiesTextEdit.DisplayFormatInEditMode = True
             ddspend.PropertiesTextEdit.DisplayFormatString = "C2"
             ddspend.FieldName = "DDSpend"
-            ddspend.VisibleIndex = 10
+            ddspend.VisibleIndex = 11
             ddspend.EditFormSettings.Visible = True
             ddspend.EditFormSettings.VisibleIndex = "3"
             ddspend.EditFormSettings.ColumnSpan = "2"
@@ -546,7 +546,7 @@ Partial Class TrackingPlanner
             FixedGainCol.PropertiesComboBox.Items.Add("Gain Share")
             FixedGainCol.PropertiesComboBox.Items.Add("Fixed Fee")
             FixedGainCol.FieldName = "Type"
-            FixedGainCol.VisibleIndex = 11
+            FixedGainCol.VisibleIndex = 12
             FixedGainCol.EditFormSettings.Visible = True
             FixedGainCol.EditFormSettings.VisibleIndex = "2"
             FixedGainCol.Caption = "Fixed Fee/Gain Share"
@@ -614,7 +614,7 @@ Partial Class TrackingPlanner
             FixedGainCol1.VisibleIndex = "11"
             FixedGainCol1.Caption = "Fixed Fee/Gain Share"
             If lnk.Text = "Planning" Then
-                FixedGainCol1.VisibleIndex = "9"
+                FixedGainCol1.VisibleIndex = 10
             End If
             FixedGainCol1.EditFormSettings.ColumnSpan = "2"
             MultiGrid.Columns.Add(FixedGainCol1)
@@ -703,7 +703,7 @@ Partial Class TrackingPlanner
             ddspend.VisibleIndex = "10"
             ddspend.EditFormSettings.ColumnSpan = "2"
             If lnk.Text = "Planning" Then
-                ddspend.VisibleIndex = "8"
+                ddspend.VisibleIndex = 9
             End If
             MultiGrid.Columns.Add(ddspend)
 
