@@ -54,6 +54,9 @@
                     <PropertiesComboBox DataSourceID="sQProject" IncrementalFilteringMode="Contains" TextField="Project" ValueField="ProjectId">
                     </PropertiesComboBox>
                 </dx:GridViewDataComboBoxColumn>
+                <dx:GridViewDataCheckColumn FieldName="Billable" Caption="Billable" VisibleIndex="5">
+                    <PropertiesCheckEdit ValueChecked="Yes" ValueUnchecked="No" ValueType="System.String" />
+                </dx:GridViewDataCheckColumn>
                 <dx:GridViewDataComboBoxColumn Caption="Task" FieldName="TaskId" VisibleIndex="6">
                     <PropertiesComboBox DataSourceID="sQTasks" IncrementalFilteringMode="Contains" TextField="Task" ValueField="TaskId">
                     </PropertiesComboBox>
@@ -90,7 +93,7 @@
             <SettingsEditing Mode="Inline">
             </SettingsEditing>
         </dx:ASPxGridView>
-        <asp:SqlDataSource ID="sQTimesheet"  OnSelecting="sQTimesheet_Selecting" runat="server" ConnectionString="<%$ ConnectionStrings:CCUpdate%>" SelectCommandType="StoredProcedure" SelectCommand="WebUpdateTimesheet_sp" DeleteCommand="DELETE FROM [Timesheet] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Timesheet] ([Employee], [ProjectId], [TaskId], [WorkDate], [StartTime], [EndTime], [Notes], [mod_user], [mod_dttm]) VALUES (@Employee, @ProjectId, @TaskId, @WorkDate, @StartTime, @EndTime, @Notes, @mod_user, @mod_dttm)" UpdateCommand="UPDATE [Timesheet] SET [Employee] = @Employee, [ProjectId] = @ProjectId, [TaskId] = @TaskId, [WorkDate] = @WorkDate, [StartTime] = @StartTime, [EndTime] = @EndTime, [Notes] = @Notes, [mod_user] = @mod_user, [mod_dttm] = @mod_dttm WHERE [Id] = @Id">
+        <asp:SqlDataSource ID="sQTimesheet"  OnSelecting="sQTimesheet_Selecting" runat="server" ConnectionString="<%$ ConnectionStrings:CCUpdate%>" SelectCommandType="StoredProcedure" SelectCommand="WebUpdateTimesheet_sp" DeleteCommand="DELETE FROM [Timesheet] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Timesheet] ([Employee], [ProjectId], [Billable], [TaskId], [WorkDate], [StartTime], [EndTime], [Notes], [mod_user], [mod_dttm]) VALUES (@Employee, @ProjectId, @Billable, @TaskId, @WorkDate, @StartTime, @EndTime, @Notes, @mod_user, @mod_dttm)" UpdateCommand="UPDATE [Timesheet] SET [Employee] = @Employee, [ProjectId] = @ProjectId, Billable = @Billable, [TaskId] = @TaskId, [WorkDate] = @WorkDate, [StartTime] = @StartTime, [EndTime] = @EndTime, [Notes] = @Notes, [mod_user] = @mod_user, [mod_dttm] = @mod_dttm WHERE [Id] = @Id">
             <DeleteParameters>
                 <asp:Parameter Name="Id" Type="Int32" />
             </DeleteParameters>
@@ -100,6 +103,7 @@
             <InsertParameters>
                 <asp:Parameter Name="Employee" Type="String" />
                 <asp:Parameter Name="ProjectId" Type="String" />
+                <asp:Parameter Name="Billable" Type="String" />
                 <asp:Parameter Name="TaskId" Type="String" />
                 <asp:Parameter Name="WorkDate" Type="DateTime" />
                 <asp:Parameter Name="StartTime" Type="DateTime" />
@@ -111,6 +115,7 @@
             <UpdateParameters>
                 <asp:Parameter Name="Employee" Type="String" />
                 <asp:Parameter Name="ProjectId" Type="String" />
+                <asp:Parameter Name="Billable" Type="String" />
                 <asp:Parameter Name="TaskId" Type="String" />
                 <asp:Parameter Name="WorkDate" Type="DateTime" />
                 <asp:Parameter Name="StartTime" Type="DateTime" />

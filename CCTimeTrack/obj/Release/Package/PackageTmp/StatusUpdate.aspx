@@ -244,7 +244,8 @@
                                     FullyPlanned = @FullyPlanned,
                                     Comments=@Comments,
                                     Planner = @Planner,
-                                    FPReason=@FPReason
+                                    FPReason=@FPReason,
+                                    ARComment =@ARComment
                                     WHERE Id=@Id" InsertCommand="INSERT INTO CC_AuditorStatus_History values(@TrackingID, @StatusID, GETDATE(), @User)">
             <UpdateParameters>
                 <asp:Parameter Name="Percentcomplete" />
@@ -271,6 +272,7 @@
                 <asp:Parameter Name="Comments" />
                 <asp:Parameter Name="Planner" />
                 <asp:Parameter Name="FPReason" />
+                <asp:Parameter Name="ARComment" />
                 <asp:Parameter Name="Id" Type="Int32" />
             </UpdateParameters>
             <InsertParameters>
@@ -576,11 +578,16 @@
                     </EditItemTemplate>
                     <EditFormSettings ColumnSpan="2" Visible="True" />
                 </dx:GridViewDataTextColumn>
-
-                <dx:GridViewDataMemoColumn Caption="Comments" FieldName="comments" PropertiesMemoEdit-MaxLength="2000"
+                <dx:GridViewDataTextColumn Caption="Aging Report Comment" EditFormCaptionStyle-Font-Bold="true"
+                    FieldName="ARComment" VisibleIndex="88" Visible="False">
+                    <EditFormSettings ColumnSpan="2" Visible="True" />
+                    <EditFormCaptionStyle Font-Bold="True">
+                    </EditFormCaptionStyle>
+                </dx:GridViewDataTextColumn>
+                <%--<dx:GridViewDataMemoColumn Caption="Comments" FieldName="comments" PropertiesMemoEdit-MaxLength="2000"
                     VisibleIndex="88" Visible="False">
                     <EditFormSettings ColumnSpan="2" Visible="False" />
-                </dx:GridViewDataMemoColumn>
+                </dx:GridViewDataMemoColumn>--%>
                 <dx:GridViewDataTextColumn VisibleIndex="89" Visible="False">
                     <EditFormSettings ColumnSpan="4" Visible="True" />
                     <EditItemTemplate>
