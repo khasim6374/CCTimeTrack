@@ -327,6 +327,10 @@ Partial Class TrackingPlanner
                     c.EditFormSettings.Visible = True
                     c.EditFormSettings.VisibleIndex = "16"
                 End If
+                If (c.FieldName.ToString()).StartsWith("WriteUpGoal") Then
+                    c.EditFormSettings.VisibleIndex = "17"
+                    c.VisibleIndex = "12"
+                End If
                 If (c.FieldName.ToString()).StartsWith("DDSpend") OrElse (c.FieldName.ToString()).StartsWith("DDLead") Then
                     c.PropertiesEdit.DisplayFormatString = "C2"
                     c.EditFormSettings.Visible = True
@@ -773,7 +777,7 @@ Partial Class TrackingPlanner
             DSMultiSource.UpdateCommand = "UPDATE CC_TrackingMain SET ClientId=@ClientId,SupplierId =@SupplierId, Planner = @Planner, LeadPlanner = @LeadPlanner,DDLead =@DDLead, [DD Spend] =@DDSpend, Status =@StatusId, NotificationLetterDate =@NotificationLetterDate, SampleApprovaldate =@SampleApprovaldate, [Sample Send] =@SampleSend, Auditor = @Auditor, Type =@Type, ContractsReceived =@ContractsReceived, DDWriteupDate =@DDWriteupDate, COQDate =@COQDate, Data_Received_Date =@Data_Received_Date, scheduleddate =@scheduleddate" + txt + " WHERE Id=@Id"
         End If
         If DSMultiSource.SelectParameters("source").DefaultValue = "DueDiligence" Then
-            DSMultiSource.UpdateCommand = "UPDATE CC_TrackingMain SET ClientId=@ClientId,SupplierId =@SupplierId, Planner = @Planner, LeadPlanner = @LeadPlanner,DDLead =@DDLead, [DD Spend] =@DDSpend, Status =@StatusId, ContractsReceived =@ContractsReceived,DDWriteupDate =@DDWriteupDate, Type =@Type, [Sample Send] =@SampleSend, Auditor = @Auditor, COQDate =@COQDate, Data_Received_Date =@Data_Received_Date,SampleApprovaldate =@SampleApprovaldate, scheduleddate =@scheduleddate, NotificationLetterDate =@NotificationLetterDate" + txt + " WHERE Id=@Id"
+            DSMultiSource.UpdateCommand = "UPDATE CC_TrackingMain SET ClientId=@ClientId,SupplierId =@SupplierId, Planner = @Planner, LeadPlanner = @LeadPlanner,DDLead =@DDLead, [DD Spend] =@DDSpend, Status =@StatusId, ContractsReceived =@ContractsReceived,DDWriteupDate =@DDWriteupDate, Type =@Type, [Sample Send] =@SampleSend, Auditor = @Auditor, COQDate =@COQDate, Data_Received_Date =@Data_Received_Date,SampleApprovaldate =@SampleApprovaldate, scheduleddate =@scheduleddate, NotificationLetterDate =@NotificationLetterDate, WriteUpGoal =@WriteUpGoal" + txt + " WHERE Id=@Id"
         End If
         If DSMultiSource.SelectParameters("source").DefaultValue = "Hold" Then
             DSMultiSource.UpdateCommand = "UPDATE CC_TrackingMain SET ClientId=@ClientId,SupplierId =@SupplierId, Planner = @Planner, LeadPlanner = @LeadPlanner, [DD Spend] =@DDSpend, Status =@StatusId, ContractsReceived =@ContractsReceived, StatusDate = @StatusDate, Type =@Type, DDLead =@DDLead, DDWriteupDate =@DDWriteupDate, [Sample Send] =@SampleSend, Auditor = @Auditor, COQDate =@COQDate, Data_Received_Date =@Data_Received_Date,SampleApprovaldate =@SampleApprovaldate, scheduleddate =@scheduleddate, NotificationLetterDate =@NotificationLetterDate" + txt + " WHERE Id=@Id"

@@ -510,6 +510,7 @@ ORDER BY CC_Planning_History.StatusID">
                 <asp:Parameter Name="Auditor" />
                 <asp:Parameter Name="Data_Received_Date" />
                 <asp:Parameter Name="DDFailedReason" />
+                <asp:Parameter Name="WriteUpGoal" />
             </UpdateParameters>
     </asp:SqlDataSource>
     <dx:ASPxGridView OnClientLayout="MultiGrid_ClientLayout" Width="99%" SettingsEditing-EditFormColumnCount="5" OnStartRowEditing="MultiGrid_StartRowEditing" OnCommandButtonInitialize="MultiGrid_CommandButtonInitialize" OnRowUpdating="MultiGrid_OnRowUpdating" CssClass="MultiGridClass" ID="MultiGrid" ClientInstanceName="MultiGrid" runat="server" AutoGenerateColumns="true" DataSourceID="DSMultiSource" KeyFieldName="Id" OnAfterPerformCallback="MultiGrid_AfterPerformCallback" EnableRowsCache="False">

@@ -19,7 +19,6 @@ C:\Users\Basil\Documents\T2\Valero\projects\CCTimeTrack\CCTimeTrack\obj\Release\
 E:\Gopan\CCTimeTrack\CCTimeTrack\bin\CCTimeTrack.dll
 E:\Gopan\CCTimeTrack\CCTimeTrack\bin\CCTimeTrack.pdb
 E:\Gopan\CCTimeTrack\CCTimeTrack\bin\CCTimeTrack.xml
-E:\Gopan\CCTimeTrack\CCTimeTrack\obj\Release\CCTimeTrack.vbprojResolveAssemblyReference.cache
 E:\Gopan\CCTimeTrack\CCTimeTrack\obj\Release\Interop.AcroBrokerLib.dll
 E:\Gopan\CCTimeTrack\CCTimeTrack\obj\Release\Interop.Excel.dll
 E:\Gopan\CCTimeTrack\CCTimeTrack\obj\Release\Interop.Office.dll

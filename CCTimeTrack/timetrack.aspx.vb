@@ -68,6 +68,7 @@ Public Class timetrack
     Protected Sub cbOptions_SelectedIndexChanged(sender As Object, e As EventArgs)
         Dim cmb As ASPxComboBox = DirectCast(sender, ASPxComboBox)
         Dim index = cmb.SelectedIndex
+        Dim cbMultiOptions As ASPxListBox = DirectCast(ASPxDropDownEdit1.FindControl("cbMultiOptions"), ASPxListBox)
         If index = "0" Then
             DSOptions.SelectCommand = ""
             cbMultiOptions.ValueField = ""
@@ -115,10 +116,19 @@ Public Class timetrack
         Dim con As New SqlConnection(strConnString)
         Dim sda As New SqlDataAdapter()
         cmd.CommandType = CommandType.StoredProcedure
+        Dim cbMultiOptions As ASPxListBox = DirectCast(ASPxDropDownEdit1.FindControl("cbMultiOptions"), ASPxListBox)
+        Dim selectedItemsAsString As String = String.Empty
 
+        For Each item As ListEditItem In cbMultiOptions.SelectedItems
+            selectedItemsAsString += item.Value + ","
+        Next
+
+        If selectedItemsAsString.Length > 0 Then
+            selectedItemsAsString = selectedItemsAsString.Trim(New Char() {","c})
+        End If
 
         cmd.Parameters.Add("@source", SqlDbType.VarChar).Value = cbOptions.Value
-        cmd.Parameters.Add("@sourceid", SqlDbType.VarChar).Value = cbMultiOptions.Value
+        cmd.Parameters.Add("@sourceid", SqlDbType.VarChar).Value = selectedItemsAsString
         cmd.Parameters.Add("@startdate", SqlDbType.DateTime).Value = dtStartdate.Value
         cmd.Parameters.Add("@enddate", SqlDbType.DateTime).Value = dtEnddate.Value
 
@@ -180,5 +190,14 @@ Public Class timetrack
         btn.CssFilePath = String.Empty
         btn.CssPostfix = String.Empty
         btn.SpriteCssFilePath = String.Empty
+    End Sub
+
+    Protected Sub cbMultiOptions_DataBound(sender As Object, e As EventArgs)
+        Dim listBox As ASPxListBox = sender
+        If listBox.Items.Count > 0 Then
+            'If listBox.Items(0).Value <> 0 Then
+            listBox.Items.Insert(0, New ListEditItem("Select All", "SelectAll"))
+            'End If
+        End If
     End Sub
 End Class

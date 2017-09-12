@@ -32,13 +32,13 @@ Partial Public Class timetrack
     Protected WithEvents cbOptions As Global.DevExpress.Web.ASPxComboBox
 
     '''<summary>
-    '''cbMultiOptions control.
+    '''ASPxDropDownEdit1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents cbMultiOptions As Global.DevExpress.Web.ASPxComboBox
+    Protected WithEvents ASPxDropDownEdit1 As Global.DevExpress.Web.ASPxDropDownEdit
 
     '''<summary>
     '''dtStartdate control.
