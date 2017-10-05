@@ -863,6 +863,46 @@ ProjsummaryDataSource control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:CCTimeTrack.documentlibrary.sQDocumentLibrary">
+	<summary>
+sQDocumentLibrary control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.documentlibrary.sQEmployee">
+	<summary>
+sQEmployee control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.documentlibrary.sQProject">
+	<summary>
+sQProject control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.documentlibrary.sQTasks">
+	<summary>
+sQTasks control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:CCTimeTrack.documentlibrary.SqlDSEmployee">
+	<summary>
+SqlDSEmployee control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:CCTimeTrack.showreport.form1">
 	<summary>
 form1 control.

@@ -163,6 +163,7 @@
     <Content Include="AuditTest.aspx" />
     <Content Include="ccdoc.aspx" />
     <Content Include="CompletedAudits.aspx" />
+    <Content Include="documentlibrary.aspx" />
     <Content Include="SupplierRank.aspx" />
     <Content Include="NewReport.aspx" />
     <Content Include="TrackingPlanner.aspx" />
@@ -245,6 +246,13 @@
     <Compile Include="CompletedAudits.aspx.vb">
       <DependentUpon>CompletedAudits.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="documentlibrary.aspx.designer.vb">
+      <DependentUpon>documentlibrary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="documentlibrary.aspx.vb">
+      <DependentUpon>documentlibrary.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="SupplierRank.aspx.designer.vb">
       <DependentUpon>SupplierRank.aspx</DependentUpon>

@@ -14,7 +14,7 @@
     </div>
     <div style="overflow: auto; clear: both" id="divmain">
         <div style="clear: both"></div>
-        <dx:ASPxGridView ID="grdXmazlist" runat="server" AutoGenerateColumns="False" DataSourceID="XmaslistDS" KeyFieldName="Id">
+        <dx:ASPxGridView ID="grdXmazlist" runat="server" AutoGenerateColumns="False" DataSourceID="XmaslistDS" KeyFieldName="Id" OnHeaderFilterFillItems="grdXmazlist_HeaderFilterFillItems">
             <Columns>
                 <dx:GridViewCommandColumn ButtonType="Link" ShowDeleteButton="True" ShowEditButton="True" ShowNewButtonInHeader="True" VisibleIndex="0">
                     <HeaderStyle BackColor="White" />
@@ -86,6 +86,7 @@
                     MinWidth="800px" AllowResize="True"
                     ResizingMode="Postponed" />
             </SettingsPopup>
+            <Settings ShowHeaderFilterButton="true" />
             <Styles>
                 <Header BackColor="#5D7B9D" Font-Bold="True" ForeColor="White"
                     HorizontalAlign="Center" Wrap="True">

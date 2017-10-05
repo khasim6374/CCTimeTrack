@@ -3,7 +3,7 @@
 <%@ Register Assembly="DevExpress.Web.v15.1, Version=15.1.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <script>
+    <script type="text/javascript">
         var textSeparator = ";";
         function OnListBoxSelectionChanged(cbMultiOptions, args) {
             if (args.index == 0)

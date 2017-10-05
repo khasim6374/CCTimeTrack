@@ -73,6 +73,9 @@
                                             <a href="historicreview.aspx">Historic Reviews</a>
                                         </div>
                                         <div class="menu">
+                                            <a href="documentlibrary.aspx">Document Library</a>
+                                        </div>
+                                        <div class="menu">
                                             <a href="Invoicing.aspx">Invoicing</a>
                                         </div>
                                         <div class="menu">
