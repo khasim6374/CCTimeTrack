@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports DevExpress.Web
+Imports System.Data.SqlClient
 
 Public Class documentlibrary
     Inherits System.Web.UI.Page
@@ -11,7 +12,7 @@ Public Class documentlibrary
     Protected Sub fileUpload_FilesUploadComplete(sender As Object, e As FilesUploadCompleteEventArgs)
         Dim fileUpload = TryCast(sender, ASPxUploadControl)
         If fileUpload.UploadedFiles.Count > 0 Then
-            Dim filePath As String = System.Configuration.ConfigurationManager.AppSettings("DocumentLibraryPath")
+            Dim filePath As String = ConfigurationSettings.AppSettings("DocumentLibraryPath")
             If Directory.Exists(Server.MapPath(filePath)) Then
                 For i As Integer = 0 To fileUpload.UploadedFiles.Count - 1
                     Dim Ext = Path.GetExtension(fileUpload.UploadedFiles(i).FileName)
@@ -20,16 +21,34 @@ Public Class documentlibrary
                         Dim filename = String.Format("{0}\{1}-{2}", Server.MapPath(filePath), DateTime.Today.ToString("yyyyMMdd"), RandomName, Ext)
                         If File.Exists(filename) Then File.Delete(filename)
                         fileUpload.UploadedFiles(i).SaveAs(filename)
-                        Dim relativePath = "~/documentlibrary/" + DateTime.Today.ToString("yyyyMMdd") + "-" + RandomName
+                        'Dim relativePath = "~/documentlibrary/" + DateTime.Today.ToString("yyyyMMdd") + "-" + RandomName
+
+                        Dim db = New SqlDb()
                         If ASPxHiddenField1.Get("id") IsNot Nothing And ASPxHiddenField1.Get("id") IsNot "" Then
-                            sQDocumentLibrary.UpdateCommand = "Update [CCDocument Library] set [DocType]='" + Ext + "', [URL]='" + relativePath + "', [crtd_dttm]=getdate() where ID='" + ASPxHiddenField1.Get("id") + "'"
-                            sQDocumentLibrary.Update()
+                            'sQDocumentLibrary.UpdateCommand = "Update [CCDocument Library] set [DocType]='" + Ext + "', [URL]='" + relativePath + "', [crtd_dttm]=getdate() where ID='" + ASPxHiddenField1.Get("id") + "'"
+                            'sQDocumentLibrary.Update()
+                            db.GetDataSet("Documentlibrary_sp",
+                                  New SqlParameter("ID", ASPxHiddenField1.Get("id")),
+                                  New SqlParameter("filename", Path.GetFileName(filename)),
+                                  New SqlParameter("Ext", Path.GetExtension(filename).TrimStart(".")),
+                                  New SqlParameter("Check", Path.GetExtension(filename).TrimStart(".")))
+
                             ASPxHiddenField1.Set("id", "")
-                            Dim uri = New Uri(Server.MapPath(ASPxHiddenField2.Get("url")), UriKind.Absolute)
-                            System.IO.File.Delete(uri.LocalPath)
+
+                            Try
+                                Dim filename1 = String.Format("{0}\{1}", Server.MapPath(filePath), ASPxHiddenField2.Get("url"))
+                                If File.Exists(filename1) Then File.Delete(filename1)
+                            Catch ex As Exception
+
+                            End Try
                         Else
-                            sQDocumentLibrary.InsertCommand = "INSERT INTO [CCDocument Library] ([DocType], [URL], [crtd_dttm]) VALUES ('" + Ext + "', '" + relativePath + "', getdate())"
-                            sQDocumentLibrary.Insert()
+                            'sQDocumentLibrary.InsertCommand = "INSERT INTO [CCDocument Library] ([DocType], [URL], [crtd_dttm]) VALUES ('" + Ext + "', '" + relativePath + "', getdate())"
+                            'sQDocumentLibrary.Insert()
+                            db.GetDataSet("Documentlibrary_sp",
+                                  New SqlParameter("ID", ""),
+                                  New SqlParameter("filename", Path.GetFileName(filename)),
+                                  New SqlParameter("Ext", Path.GetExtension(filename).TrimStart(".")),
+                                  New SqlParameter("Check", "Insert"))
                         End If
                     End If
                 Next
@@ -85,8 +104,11 @@ Public Class documentlibrary
         Dim values As Object() = CType(container.Grid.GetRowValues(container.VisibleIndex, New String() {"ID", "DocType", "URL"}), Object())
         sQDocumentLibrary.DeleteCommand = "Delete From [CCDocument Library] where ID='" + values(0).ToString() + "'"
         sQDocumentLibrary.Delete()
-        Dim uri = New Uri(Server.MapPath(values(2)), UriKind.Absolute)
-        System.IO.File.Delete(uri.LocalPath)
+        'Dim uri = New Uri(Server.MapPath(values(2)), UriKind.Absolute)
+        'System.IO.File.Delete(uri.LocalPath)
+        Dim filePath As String = ConfigurationSettings.AppSettings("DocumentLibraryPath")
+        Dim filename1 = String.Format("{0}\{1}", Server.MapPath(filePath), values(2))
+        If File.Exists(filename1) Then File.Delete(filename1)
     End Sub
     Protected Sub btnEdit_Click(ByVal sender As Object, ByVal e As System.EventArgs)
         Dim btn As ASPxButton = CType(sender, ASPxButton)
