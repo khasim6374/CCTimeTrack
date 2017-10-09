@@ -57,10 +57,10 @@
                     <PropertiesTextEdit DisplayFormatString="c2">
                     </PropertiesTextEdit>
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="AmouniIdentified" VisibleIndex="22">
+                <%--<dx:GridViewDataTextColumn FieldName="AmouniIdentified" VisibleIndex="22">
                     <PropertiesTextEdit DisplayFormatString="c2">
                     </PropertiesTextEdit>
-                </dx:GridViewDataTextColumn>
+                </dx:GridViewDataTextColumn>--%>
                 <dx:GridViewDataDateColumn FieldName="ActualInvoiceDate" VisibleIndex="23">
                 </dx:GridViewDataDateColumn>
                 <dx:GridViewDataTextColumn FieldName="LINK" VisibleIndex="24" Caption="Document">
@@ -75,9 +75,9 @@
                 <dx:GridViewDataDateColumn FieldName="AuditorKickOff" VisibleIndex="16">
                     <PropertiesDateEdit DisplayFormatString="">
                     </PropertiesDateEdit>
-                </dx:GridViewDataDateColumn>
+                </dx:GridViewDataDateColumn><%--
                   <dx:GridViewDataTextColumn FieldName="IssuesIdentfied" VisibleIndex="17">                 
-                </dx:GridViewDataTextColumn>
+                </dx:GridViewDataTextColumn>--%>
                  <dx:GridViewDataTextColumn FieldName="ClientType" VisibleIndex="18">                 
                 </dx:GridViewDataTextColumn>
             </Columns>

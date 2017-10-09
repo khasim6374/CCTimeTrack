@@ -36,7 +36,6 @@
             var clientName = $("#lblClientName").html();
             var supName = $("#lblSupplierName").html();
             pnlPlanningScoreCard.SetContentUrl('fileUpload.aspx?id=' + id + "&c=" + encodeURIComponent(clientName) + "&s=" + encodeURIComponent(supName));
-+
             pnlPlanningScoreCard.SetHeaderText("SMI File Upload");
             pnlPlanningScoreCard.SetSize(650, 520);
             pnlPlanningScoreCard.Show();

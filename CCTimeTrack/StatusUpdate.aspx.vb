@@ -190,7 +190,7 @@ Partial Class StatusUpdate
         End Try
     End Function
 
-    Protected Sub ExportToExcel(ByVal sender As Object, ByVal e As System.EventArgs) Handles ExportReportBtn.Click
+    Protected Sub ExportToExcel(ByVal sender As Object, ByVal e As System.EventArgs)
         Dim ds = New DataSet()
         Dim cmd As New SqlCommand("Pipeline_Report")
         Dim dt As DataTable = GetData(cmd, "CCPipeline")

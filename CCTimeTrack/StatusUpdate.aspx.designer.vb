@@ -111,7 +111,4 @@ Partial Public Class StatusUpdate
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ASPxHiddenField3 As Global.DevExpress.Web.ASPxHiddenField
-
-    Protected WithEvents ExportReportBtn As Global.DevExpress.Web.ASPxButton
-
 End Class

@@ -19,7 +19,7 @@ Public Class fileUpload
     Protected Sub grd_RowDeleted(sender As Object, e As DevExpress.Web.Data.ASPxDataDeletedEventArgs) Handles grd.RowDeleted
         Try
             Dim filename1 = e.Values("Attachdocument")
-            Dim filePath As String = ConfigurationSettings.AppSettings("FilePath")
+            Dim filePath As String = System.Configuration.ConfigurationManager.AppSettings("FilePath")
             Dim clientName As String = Request.QueryString("c")
             Dim supName As String = Request.QueryString("s")
             clientName = GetSafeFilename(clientName)

@@ -14,6 +14,51 @@ Option Explicit On
 Partial Public Class documentlibrary
 
     '''<summary>
+    '''ASPxHiddenField1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ASPxHiddenField1 As Global.DevExpress.Web.ASPxHiddenField
+
+    '''<summary>
+    '''ASPxHiddenField2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ASPxHiddenField2 As Global.DevExpress.Web.ASPxHiddenField
+
+    '''<summary>
+    '''pnlDocumentLibrary control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents pnlDocumentLibrary As Global.DevExpress.Web.ASPxPopupControl
+
+    '''<summary>
+    '''fileUpload control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents fileUpload As Global.DevExpress.Web.ASPxUploadControl
+
+    '''<summary>
+    '''gridDocumentLibrary control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents gridDocumentLibrary As Global.DevExpress.Web.ASPxGridView
+
+    '''<summary>
     '''sQDocumentLibrary control.
     '''</summary>
     '''<remarks>
@@ -21,40 +66,4 @@ Partial Public Class documentlibrary
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents sQDocumentLibrary As Global.System.Web.UI.WebControls.SqlDataSource
-
-    '''<summary>
-    '''sQEmployee control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents sQEmployee As Global.System.Web.UI.WebControls.SqlDataSource
-
-    '''<summary>
-    '''sQProject control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents sQProject As Global.System.Web.UI.WebControls.SqlDataSource
-
-    '''<summary>
-    '''sQTasks control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents sQTasks As Global.System.Web.UI.WebControls.SqlDataSource
-
-    '''<summary>
-    '''SqlDSEmployee control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents SqlDSEmployee As Global.System.Web.UI.WebControls.SqlDataSource
 End Class
