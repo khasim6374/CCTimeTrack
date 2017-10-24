@@ -226,7 +226,7 @@ ORDER BY CC_Planning_History.StatusID">
                 <asp:Parameter Name="TrackingID" Type="Int32" />
             </SelectParameters>
         </asp:SqlDataSource>
-        <dx:ASPxGridView OnClientLayout="grid2_ClientLayout" CssClass="TopMargin" ID="grid2" ClientInstanceName="grid2" OnHeaderFilterFillItems="grid2_HeaderFilterFillItems" OnCommandButtonInitialize="grid2_CommandButtonInitialize" SettingsEditing-EditFormColumnCount="5" runat="server" DataSourceID="SqlDataSource3" KeyFieldName="Id" OnAfterPerformCallback="grid2_AfterPerformCallback" OnStartRowEditing="grid2_StartRowEditing" OnCellEditorInitialize="grid2_CellEditorInitialize" Width="100%" EnableRowsCache="False" OnInitNewRow="grid2_InitNewRow" OnRowUpdating="grid2_OnRowUpdating">
+        <dx:ASPxGridView OnCustomColumnSort="grid2_CustomColumnSort" OnClientLayout="grid2_ClientLayout" CssClass="TopMargin" ID="grid2" ClientInstanceName="grid2" OnHeaderFilterFillItems="grid2_HeaderFilterFillItems" OnCommandButtonInitialize="grid2_CommandButtonInitialize" SettingsEditing-EditFormColumnCount="5" runat="server" DataSourceID="SqlDataSource3" KeyFieldName="Id" OnAfterPerformCallback="grid2_AfterPerformCallback" OnStartRowEditing="grid2_StartRowEditing" OnCellEditorInitialize="grid2_CellEditorInitialize" Width="100%" EnableRowsCache="False" OnInitNewRow="grid2_InitNewRow" OnRowUpdating="grid2_OnRowUpdating">
         <%--<ClientSideEvents CustomButtonClick="function(s, e) {if(e.buttonID == 'myButton3'){alert();grid2.AddNewRow();alert();}}" />--%>
         <ClientSideEvents EndCallback="OnEndCallBack2" BeginCallback="function(s,e){
             if(e.command=='UPDATEEDIT'){OnEndCallBack2(s,e);}}" CustomButtonClick="function(s, e) { if(e.buttonID == 'myButton'){ASPxHiddenField1.Set('index', e.visibleIndex);s.StartEditRow(e.visibleIndex);}}" />
@@ -235,9 +235,9 @@ ORDER BY CC_Planning_History.StatusID">
             </dx:GridViewCommandColumn>
             <dx:GridViewCommandColumn ShowNewButtonInHeader="true" Caption=" " VisibleIndex="1">
                 <CustomButtons>
-                        <dx:GridViewCommandColumnCustomButton ID="myButton" Text="Edit">
-                        </dx:GridViewCommandColumnCustomButton>
-                    </CustomButtons>
+                    <dx:GridViewCommandColumnCustomButton ID="myButton" Text="Edit">
+                    </dx:GridViewCommandColumnCustomButton>
+                </CustomButtons>
             </dx:GridViewCommandColumn>
             <dx:GridViewDataComboBoxColumn Visible="True" VisibleIndex="2" Caption="Client" FieldName="Clientid" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
                 <PropertiesComboBox DataSourceID="SqlDataSource5" TextField="ClientName" ValueField="Clientid">
@@ -245,7 +245,7 @@ ORDER BY CC_Planning_History.StatusID">
                 <EditFormCaptionStyle Font-Bold="True">
                 </EditFormCaptionStyle>
                 <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="0" />
-                <Settings AllowAutoFilter="Default" AllowSort="True" SortMode="DisplayText" />
+                <Settings AllowAutoFilter="Default" AllowSort="True" SortMode="Custom" />
             </dx:GridViewDataComboBoxColumn>
             <dx:GridViewDataComboBoxColumn Visible="True" VisibleIndex="3" Caption="Supplier" FieldName="SupplierId" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
                 <PropertiesComboBox DataSourceID="SqlDataSource6" TextField="supplierName" ValueField="SupplierId">
@@ -253,7 +253,7 @@ ORDER BY CC_Planning_History.StatusID">
                 <EditFormCaptionStyle Font-Bold="True">
                 </EditFormCaptionStyle>
                 <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="1" />
-                <Settings AllowAutoFilter="Default" AllowSort="True" SortMode="DisplayText" />
+                <Settings AllowAutoFilter="Default" AllowSort="True" SortMode="Custom" />
             </dx:GridViewDataComboBoxColumn>
             <dx:GridViewDataComboBoxColumn Visible="True" VisibleIndex="4" Caption="Auditor" FieldName="Auditor" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
 	            <PropertiesComboBox DataSourceID="SqlDataSource8" TextField="Employee" ValueField="Employee">
@@ -286,29 +286,30 @@ ORDER BY CC_Planning_History.StatusID">
             <dx:GridViewDataComboBoxColumn Visible="True" VisibleIndex="7" Caption="Planning Status" FieldName="StatusId" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
 	            <PropertiesComboBox DataSourceID="SqlDataSource4" TextField="Status" ValueField="StatusId">
 	             <ClientSideEvents SelectedIndexChanged="function(s, e) {
-	             if(grid2.GetEditor('StatusId').GetValue()=='10'){
-		            grid2.GetEditor('ContractReceiptDate').SetValue(new Date());
-	             }
-	             if(grid2.GetEditor('StatusId').GetValue()=='12'){
-		            grid2.GetEditor('scheduleddate').SetValue(new Date());
-	             }
-	             if(grid2.GetEditor('StatusId').GetValue()=='18'){
-		            grid2.GetEditor('NotificationLetterDate').SetValue(new Date());
-	             }
-	             if(grid2.GetEditor('StatusId').GetValue()=='24'){
-		            grid2.GetEditor('DDWriteupDate').SetValue(new Date());
-	             }
-                 if(grid2.GetEditor('StatusId').GetValue()=='19'){
+	                 if(grid2.GetEditor('StatusId').GetValue()=='10'){
+		                grid2.GetEditor('ContractReceiptDate').SetValue(new Date());
+	                 }
+	                 if(grid2.GetEditor('StatusId').GetValue()=='12'){
+		                grid2.GetEditor('scheduleddate').SetValue(new Date());
+	                 }
+	                 if(grid2.GetEditor('StatusId').GetValue()=='18'){
+		                grid2.GetEditor('NotificationLetterDate').SetValue(new Date());
+	                 }
+	                 if(grid2.GetEditor('StatusId').GetValue()=='24'){
+		                grid2.GetEditor('DDWriteupDate').SetValue(new Date());
+	                 }
+                     if(grid2.GetEditor('StatusId').GetValue()=='19'){
                         TPclb.PerformCallback(s.GetValue());
                         pcDDFailedReason.Show();
-	             }else{
-	                clb.PerformCallback(s.GetValue())
-                 }
+	                 }else{
+	                    clb.PerformCallback(s.GetValue())
+                     }
 	             }" />
 	            </PropertiesComboBox>
 	            <EditFormCaptionStyle Font-Bold="True">
 	            </EditFormCaptionStyle>
 	            <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="8" />
+                <Settings SortMode="Custom" />
             </dx:GridViewDataComboBoxColumn>
             <dx:GridViewDataDateColumn Visible="True" VisibleIndex="9" FieldName="NotificationLetterDate" ShowInCustomizationForm="True">
 	            <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormatString="MM/dd/yyyy"></PropertiesDateEdit>

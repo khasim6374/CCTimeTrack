@@ -23,82 +23,84 @@
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="ClientName" VisibleIndex="1">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="supplierName" VisibleIndex="2" Caption="Supplier Name">
+                 <dx:GridViewDataTextColumn FieldName="ClientType" VisibleIndex="2">                 
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="Auditor" VisibleIndex="3">
+                <dx:GridViewDataTextColumn FieldName="supplierName" VisibleIndex="3" Caption="Supplier Name">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="Planner" VisibleIndex="4">
+                <dx:GridViewDataTextColumn FieldName="Auditor" VisibleIndex="4">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="Type" VisibleIndex="6">
+                <dx:GridViewDataTextColumn FieldName="Planner" VisibleIndex="5">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataDateColumn FieldName="NotificationLetterDate" Caption="NDR Date" ShowInCustomizationForm="True" VisibleIndex="7">
-                    <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
-                    <EditFormSettings ColumnSpan="2" />
-                    <Settings AllowHeaderFilter="False" />
-                </dx:GridViewDataDateColumn>
-                <dx:GridViewDataDateColumn FieldName="DateTimeStamp" Caption="Settlement Date" ShowInCustomizationForm="True" VisibleIndex="8">
-                    <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
-                    <EditFormSettings ColumnSpan="2" />
-                    <Settings AllowHeaderFilter="False" />
-                </dx:GridViewDataDateColumn>
-                <dx:GridViewDataDateColumn FieldName="DateTimeStamp" Caption="Completed Date" ShowInCustomizationForm="True" VisibleIndex="9">
-                    <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
-                    <EditFormSettings ColumnSpan="2" />
-                    <Settings AllowHeaderFilter="False" />
-                </dx:GridViewDataDateColumn>
-                <dx:GridViewDataDateColumn FieldName="LeadPlanner" VisibleIndex="10">
+                <dx:GridViewDataTextColumn FieldName="DDLead" VisibleIndex="6">
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataDateColumn FieldName="BDContact" VisibleIndex="7">
                     <PropertiesDateEdit DisplayFormatInEditMode="True">
                     </PropertiesDateEdit>
                 </dx:GridViewDataDateColumn>
-                <dx:GridViewDataDateColumn FieldName="BDContact" Caption="BD Lead" VisibleIndex="11">
+                <dx:GridViewDataTextColumn FieldName="Type" VisibleIndex="8">
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataDateColumn FieldName="LeadPlanner" VisibleIndex="9">
                     <PropertiesDateEdit DisplayFormatInEditMode="True">
+                    </PropertiesDateEdit>
+                </dx:GridViewDataDateColumn>
+                <dx:GridViewDataDateColumn FieldName="NotificationLetterDate" Caption="NDR Date" ShowInCustomizationForm="True" VisibleIndex="10">
+                    <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
+                    <EditFormSettings ColumnSpan="2" />
+                    <Settings AllowHeaderFilter="False" />
+                </dx:GridViewDataDateColumn>
+                <dx:GridViewDataDateColumn FieldName="AuditorKickOff" VisibleIndex="11">
+                    <PropertiesDateEdit DisplayFormatString="">
                     </PropertiesDateEdit>
                 </dx:GridViewDataDateColumn>
                 <dx:GridViewDataDateColumn FieldName="ScheduledDate" VisibleIndex="12">
-                </dx:GridViewDataDateColumn>                
-                <dx:GridViewDataTextColumn FieldName="TargetGrossRecovery" VisibleIndex="17">
+                </dx:GridViewDataDateColumn>
+                <dx:GridViewDataTextColumn FieldName="SpendReviewed" VisibleIndex="13">
                     <PropertiesTextEdit DisplayFormatString="c2">
                     </PropertiesTextEdit>
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="SpendReviewed" VisibleIndex="18">
+                <dx:GridViewDataTextColumn FieldName="AuditorWat" Caption="Action Items" VisibleIndex="14">
+                </dx:GridViewDataTextColumn>             
+                <dx:GridViewDataTextColumn FieldName="TargetGrossRecovery" VisibleIndex="15">
                     <PropertiesTextEdit DisplayFormatString="c2">
                     </PropertiesTextEdit>
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="TargetRevenewShare" VisibleIndex="19">
+                <dx:GridViewDataTextColumn FieldName="TargetRevenewShare" VisibleIndex="16">
                     <PropertiesTextEdit DisplayFormatString="c2">
                     </PropertiesTextEdit>
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="ActualRevenewShare" VisibleIndex="20">
+                <dx:GridViewDataTextColumn FieldName="ActualGrossRecovery" VisibleIndex="17">
                     <PropertiesTextEdit DisplayFormatString="c2">
                     </PropertiesTextEdit>
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="ActualGrossRecovery" VisibleIndex="21">
+                <dx:GridViewDataTextColumn FieldName="ActualRevenewShare" VisibleIndex="18">
                     <PropertiesTextEdit DisplayFormatString="c2">
                     </PropertiesTextEdit>
                 </dx:GridViewDataTextColumn>
+                <dx:GridViewDataDateColumn FieldName="DateTimeStamp" Caption="Settlement Date" ShowInCustomizationForm="True" VisibleIndex="19">
+                    <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
+                    <EditFormSettings ColumnSpan="2" />
+                    <Settings AllowHeaderFilter="False" />
+                </dx:GridViewDataDateColumn>
+                <dx:GridViewDataDateColumn FieldName="DateTimeStamp" Caption="Completed Date" ShowInCustomizationForm="True" VisibleIndex="20">
+                    <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
+                    <EditFormSettings ColumnSpan="2" />
+                    <Settings AllowHeaderFilter="False" />
+                </dx:GridViewDataDateColumn>
                 <%--<dx:GridViewDataTextColumn FieldName="AmouniIdentified" VisibleIndex="22">
                     <PropertiesTextEdit DisplayFormatString="c2">
                     </PropertiesTextEdit>
                 </dx:GridViewDataTextColumn>--%>
-                <dx:GridViewDataDateColumn FieldName="ActualInvoiceDate" VisibleIndex="23">
+                <dx:GridViewDataDateColumn FieldName="ActualInvoiceDate" VisibleIndex="21">
                 </dx:GridViewDataDateColumn>
-                <dx:GridViewDataTextColumn FieldName="LINK" VisibleIndex="24" Caption="Document">
+                <dx:GridViewDataTextColumn FieldName="LINK" VisibleIndex="22" Caption="Document">
                     <DataItemTemplate>
                         <a href="javascript:void(0)" onclick='showPopup(<%#Eval("Id")%>)'><%#Eval("LINK")%></a>
                     </DataItemTemplate>
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="comments" VisibleIndex="26" Caption="Comments">
-                </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="AuditorWat" Caption="Action Items" VisibleIndex="14">
-                </dx:GridViewDataTextColumn>
-                <dx:GridViewDataDateColumn FieldName="AuditorKickOff" VisibleIndex="16">
-                    <PropertiesDateEdit DisplayFormatString="">
-                    </PropertiesDateEdit>
-                </dx:GridViewDataDateColumn><%--
+                <dx:GridViewDataTextColumn FieldName="comments" VisibleIndex="23" Caption="Comments">
+                </dx:GridViewDataTextColumn><%--
                   <dx:GridViewDataTextColumn FieldName="IssuesIdentfied" VisibleIndex="17">                 
                 </dx:GridViewDataTextColumn>--%>
-                 <dx:GridViewDataTextColumn FieldName="ClientType" VisibleIndex="18">                 
-                </dx:GridViewDataTextColumn>
             </Columns>
             <SettingsBehavior ColumnResizeMode="Control" EnableRowHotTrack="True" />
             <SettingsPager PageSize="25">

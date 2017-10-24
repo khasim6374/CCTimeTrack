@@ -69,7 +69,12 @@
                     <PropertiesTextEdit DisplayFormatInEditMode="True" DisplayFormatString="C2">
                     </PropertiesTextEdit>
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="Type" VisibleIndex="17" Caption="Fixed Fee/Gain Share">
+                <dx:GridViewDataDateColumn Caption="DD Failed Date" FieldName="DDFaileddate" ShowInCustomizationForm="True" VisibleIndex="17">
+                    <PropertiesDateEdit DisplayFormatString="MM/dd/yyyy" EditFormat="Date"></PropertiesDateEdit>
+                    <EditFormSettings ColumnSpan="2" />
+                    <Settings AllowHeaderFilter="False" />
+                </dx:GridViewDataDateColumn>
+                <dx:GridViewDataTextColumn FieldName="Type" VisibleIndex="18" Caption="Fixed Fee/Gain Share">
                 </dx:GridViewDataTextColumn>
 
                 <%--<dx:GridViewDataDateColumn FieldName="NotificationLetterDate" ShowInCustomizationForm="True" VisibleIndex="8" Visible="False">

@@ -27,8 +27,8 @@
                 <dx:GridViewDataTextColumn FieldName="Picture" VisibleIndex="21" Visible="False">
                     <EditFormSettings Visible="False" />
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="Favorite_Charity" VisibleIndex="4" Caption="Favorite Charity">
-                </dx:GridViewDataTextColumn>
+                <%--<dx:GridViewDataTextColumn FieldName="Favorite_Charity" VisibleIndex="4" Caption="Favorite Charity">
+                </dx:GridViewDataTextColumn>--%>
                 <dx:GridViewDataTextColumn FieldName="GiftTier" VisibleIndex="5" Caption="Gift Tier">
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="Sent" VisibleIndex="22" Visible="False">
@@ -38,8 +38,8 @@
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="First_Name" VisibleIndex="7" Caption="First Name">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="Middle_Name" VisibleIndex="8" Caption="Middle Name">
-                </dx:GridViewDataTextColumn>
+                <%--<dx:GridViewDataTextColumn FieldName="Middle_Name" VisibleIndex="8" Caption="Middle Name">
+                </dx:GridViewDataTextColumn>--%>
                 <dx:GridViewDataTextColumn FieldName="Last_Name" VisibleIndex="9" Caption="Last Name">
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="Business_Street" VisibleIndex="10" Caption="Business Street">
@@ -52,8 +52,8 @@
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="Zip_Code" VisibleIndex="14" Caption="Zip Code">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="BusinessPhone" VisibleIndex="15" Caption="Business Phone">
-                </dx:GridViewDataTextColumn>
+                <%--<dx:GridViewDataTextColumn FieldName="BusinessPhone" VisibleIndex="15" Caption="Business Phone">
+                </dx:GridViewDataTextColumn>--%>
                 <dx:GridViewDataTextColumn FieldName="EmailAddress" VisibleIndex="16" Caption="Email Address">
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="Id" VisibleIndex="23" Visible="False" ReadOnly="True">
@@ -64,8 +64,8 @@
                 <dx:GridViewDataTextColumn FieldName="Mod_User" VisibleIndex="25" Visible="False">
                     <EditFormSettings Visible="False" />
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataDateColumn FieldName="Birthdate" VisibleIndex="17" Caption="Birth Date">
-                </dx:GridViewDataDateColumn>
+                <%--<dx:GridViewDataDateColumn FieldName="Birthdate" VisibleIndex="17" Caption="Birth Date">
+                </dx:GridViewDataDateColumn>--%>
                 <dx:GridViewDataTextColumn FieldName="UniqueID" VisibleIndex="26" Visible="False">
                     <EditFormSettings Visible="False" />
                 </dx:GridViewDataTextColumn>
@@ -87,6 +87,8 @@
                     ResizingMode="Postponed" />
             </SettingsPopup>
             <Settings ShowHeaderFilterButton="true" />
+            <SettingsPager PageSize="25">
+            </SettingsPager>
             <Styles>
                 <Header BackColor="#5D7B9D" Font-Bold="True" ForeColor="White"
                     HorizontalAlign="Center" Wrap="True">
