@@ -1,13 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
   <publishProfile publishUrl="C:\Users\khasim.a\Desktop\TrackingPlanner" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="Default Web Site/CCTimeTrack" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
-    <file relUrl="Images/reve.png" publishTime="01/01/2014 19:13:36" />
     <file relUrl="timetrack.aspx" publishTime="10/05/2017 16:24:55" />
     <file relUrl="General.ashx" publishTime="05/23/2014 19:49:02" />
     <file relUrl="Site.Master" publishTime="10/05/2017 16:17:57" />
     <file relUrl="Styles/Site.css" publishTime="08/03/2017 01:48:50" />
-    <file relUrl="bin/EntityFramework.dll" publishTime="12/27/2013 19:58:38" />
-    <file relUrl="documentlibrary.aspx" publishTime="10/08/2017 20:43:04" />
     <file relUrl="bin/System.Web.Providers.dll" publishTime="12/27/2013 19:58:28" />
     <file relUrl="bin/DotNetOpenAuth.AspNet.dll" publishTime="12/27/2013 19:58:38" />
     <file relUrl="Report/DSReport.xsc" publishTime="01/01/2014 05:43:42" />
@@ -15,40 +12,43 @@
     <file relUrl="Report/showreport.aspx" publishTime="01/01/2014 18:12:06" />
     <file relUrl="fileUpload.aspx" publishTime="10/07/2017 09:24:47" />
     <file relUrl="bin/Microsoft.AspNet.FriendlyUrls.dll" publishTime="12/27/2013 19:58:40" />
+    <file relUrl="Timesheetsummary.aspx" publishTime="01/01/2014 19:24:14" />
     <file relUrl="Invoicing.aspx" publishTime="09/02/2016 22:49:48" />
     <file relUrl="bin/DotNetOpenAuth.OAuth.Consumer.dll" publishTime="12/27/2013 19:58:36" />
+    <file relUrl="ProjectSummary.aspx" publishTime="01/01/2014 19:24:38" />
     <file relUrl="Report/DSReport.xss" publishTime="01/01/2014 05:43:42" />
     <file relUrl="CompletedAudits.aspx" publishTime="06/15/2016 15:33:40" />
     <file relUrl="SupplierRank.aspx" publishTime="08/04/2017 19:11:34" />
     <file relUrl="Account/Login.aspx" publishTime="01/02/2014 12:31:18" />
     <file relUrl="bin/Microsoft.AspNet.Membership.OpenAuth.dll" publishTime="12/27/2013 19:58:40" />
-    <file relUrl="bin/CCTimeTrack.pdb" publishTime="10/24/2017 12:35:35" />
+    <file relUrl="bin/CCTimeTrack.pdb" publishTime="11/02/2017 17:01:24" />
     <file relUrl="PlanningScoreCard.aspx" publishTime="11/18/2014 06:49:14" />
     <file relUrl="ccdoc.aspx" publishTime="05/26/2017 01:00:27" />
-    <file relUrl="bin/CCTimeTrack.dll" publishTime="10/24/2017 12:35:35" />
+    <file relUrl="bin/CCTimeTrack.dll" publishTime="11/02/2017 17:01:24" />
     <file relUrl="bin/DotNetOpenAuth.Core.dll" publishTime="12/27/2013 19:58:34" />
     <file relUrl="Default.aspx" publishTime="12/31/2013 15:36:12" />
     <file relUrl="bin/Newtonsoft.Json.dll" publishTime="10/02/2013 12:10:10" />
+    <file relUrl="bin/DotNetOpenAuth.OpenId.dll" publishTime="12/27/2013 19:58:36" />
     <file relUrl="Images/excel.png" publishTime="10/06/2014 14:09:38" />
     <file relUrl="historicreview.aspx" publishTime="10/19/2017 22:57:45" />
     <file relUrl="timesheet.aspx.cs" publishTime="04/21/2016 20:52:17" />
-    <file relUrl="ProjectSummary.aspx" publishTime="01/01/2014 19:24:38" />
+    <file relUrl="documentlibrary.aspx" publishTime="10/08/2017 20:43:04" />
     <file relUrl="Images/revenew.png" publishTime="01/02/2014 18:06:18" />
     <file relUrl="StatusUpdate.aspx" publishTime="10/08/2017 12:28:35" />
     <file relUrl="bin/AspNet.ScriptManager.jQuery.UI.Combined.dll" publishTime="12/27/2013 19:58:34" />
     <file relUrl="bin/GemBox.Spreadsheet.dll" publishTime="06/12/2014 11:48:28" />
-    <file relUrl="Timesheetsummary.aspx" publishTime="01/01/2014 19:24:14" />
+    <file relUrl="Images/reve.png" publishTime="01/01/2014 19:13:36" />
     <file relUrl="TimeSheet.aspx" publishTime="10/11/2016 22:00:48" />
+    <file relUrl="bin/CCTimeTrack.xml" publishTime="11/02/2017 17:01:24" />
     <file relUrl="bin/Microsoft.Web.Infrastructure.dll" publishTime="07/08/2013 16:15:08" />
-    <file relUrl="bin/DotNetOpenAuth.OpenId.dll" publishTime="12/27/2013 19:58:36" />
+    <file relUrl="Web.config" publishTime="11/02/2017 17:01:26" />
     <file relUrl="bin/DotNetOpenAuth.OAuth.dll" publishTime="12/27/2013 19:58:36" />
     <file relUrl="xmaslist.aspx" publishTime="10/20/2017 23:41:20" />
-    <file relUrl="bin/CCTimeTrack.xml" publishTime="10/24/2017 12:35:35" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="12/27/2013 19:58:38" />
     <file relUrl="invoiceprint.aspx" publishTime="01/01/2014 19:14:34" />
-    <file relUrl="auditormatrix.aspx" publishTime="08/29/2014 09:02:52" />
     <file relUrl="NewReport.aspx" publishTime="10/20/2017 17:49:24" />
-    <file relUrl="Web.config" publishTime="10/24/2017 12:35:37" />
-    <file relUrl="TrackingPlanner.aspx" publishTime="10/24/2017 12:20:31" />
+    <file relUrl="auditormatrix.aspx" publishTime="08/29/2014 09:02:52" />
+    <file relUrl="TrackingPlanner.aspx" publishTime="11/02/2017 17:00:32" />
     <file relUrl="bin/DotNetOpenAuth.OpenId.RelyingParty.dll" publishTime="12/27/2013 19:58:36" />
     <file relUrl="AuditTest.aspx" publishTime="06/15/2016 15:34:36" />
     <file relUrl="bin/AspNet.ScriptManager.jQuery.dll" publishTime="12/27/2013 19:58:34" />

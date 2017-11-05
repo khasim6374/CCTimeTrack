@@ -55,6 +55,9 @@
             MultiGrid.SetHeight(height - 150);
             MultiGrid.AdjustControl();
         }
+        $(window).resize(function () {
+            adjustSize();
+        });
     </script>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
@@ -245,7 +248,7 @@ ORDER BY CC_Planning_History.StatusID">
                 <EditFormCaptionStyle Font-Bold="True">
                 </EditFormCaptionStyle>
                 <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="0" />
-                <Settings AllowAutoFilter="Default" AllowSort="True" SortMode="Custom" />
+                <Settings AllowAutoFilter="Default" AllowSort="True" SortMode="DisplayText" />
             </dx:GridViewDataComboBoxColumn>
             <dx:GridViewDataComboBoxColumn Visible="True" VisibleIndex="3" Caption="Supplier" FieldName="SupplierId" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
                 <PropertiesComboBox DataSourceID="SqlDataSource6" TextField="supplierName" ValueField="SupplierId">
@@ -253,7 +256,7 @@ ORDER BY CC_Planning_History.StatusID">
                 <EditFormCaptionStyle Font-Bold="True">
                 </EditFormCaptionStyle>
                 <EditFormSettings ColumnSpan="2" Visible="True" VisibleIndex="1" />
-                <Settings AllowAutoFilter="Default" AllowSort="True" SortMode="Custom" />
+                <Settings AllowAutoFilter="Default" AllowSort="True" SortMode="DisplayText" />
             </dx:GridViewDataComboBoxColumn>
             <dx:GridViewDataComboBoxColumn Visible="True" VisibleIndex="4" Caption="Auditor" FieldName="Auditor" EditFormCaptionStyle-Font-Bold="true" PropertiesComboBox-EnableCallbackMode="True">
 	            <PropertiesComboBox DataSourceID="SqlDataSource8" TextField="Employee" ValueField="Employee">
@@ -412,7 +415,7 @@ ORDER BY CC_Planning_History.StatusID">
                     </Header>
                 </EditForm>
             </StylesPopup>--%>
-            <Settings VerticalScrollBarMode="Visible" ShowFooter="True" ShowHeaderFilterButton="true" />
+            <Settings HorizontalScrollBarMode="Auto" VerticalScrollBarMode="Visible" ShowFooter="True" ShowHeaderFilterButton="true" />
             <SettingsCookies CookiesID="SaveViewState" Version="1" Enabled="true" StoreColumnsWidth="True" StoreColumnsVisiblePosition="true" />
             <SettingsText PopupEditFormCaption="Tracking - Planner" />
             <%--<SettingsPopup>
@@ -514,12 +517,12 @@ ORDER BY CC_Planning_History.StatusID">
                 <asp:Parameter Name="WriteUpGoal" />
             </UpdateParameters>
     </asp:SqlDataSource>
-    <dx:ASPxGridView OnClientLayout="MultiGrid_ClientLayout" Width="99%" SettingsEditing-EditFormColumnCount="5" OnStartRowEditing="MultiGrid_StartRowEditing" OnCommandButtonInitialize="MultiGrid_CommandButtonInitialize" OnRowUpdating="MultiGrid_OnRowUpdating" CssClass="MultiGridClass" ID="MultiGrid" ClientInstanceName="MultiGrid" runat="server" AutoGenerateColumns="true" DataSourceID="DSMultiSource" KeyFieldName="Id" OnAfterPerformCallback="MultiGrid_AfterPerformCallback" EnableRowsCache="False">
+    <dx:ASPxGridView OnCustomColumnSort="MultiGrid_CustomColumnSort" OnClientLayout="MultiGrid_ClientLayout" Width="99%" SettingsEditing-EditFormColumnCount="5" OnStartRowEditing="MultiGrid_StartRowEditing" OnCommandButtonInitialize="MultiGrid_CommandButtonInitialize" OnRowUpdating="MultiGrid_OnRowUpdating" CssClass="MultiGridClass" ID="MultiGrid" ClientInstanceName="MultiGrid" runat="server" AutoGenerateColumns="true" DataSourceID="DSMultiSource" KeyFieldName="Id" OnAfterPerformCallback="MultiGrid_AfterPerformCallback" EnableRowsCache="False">
         <%--<Columns>
             
         </Columns>--%>
         <ClientSideEvents CustomButtonClick="function(s, e) { if(e.buttonID == 'EditBtn'){hdnField.Set('index', e.visibleIndex);s.StartEditRow(e.visibleIndex);}}" />
-        <SettingsPager Mode="ShowAllRecords">
+            <SettingsPager Mode="ShowAllRecords">
             </SettingsPager>
             <SettingsBehavior ColumnResizeMode="NextColumn" />
             <ClientSideEvents ColumnResized="function(s, e) { e.processOnServer = true; }" />
@@ -530,8 +533,7 @@ ORDER BY CC_Planning_History.StatusID">
             <SettingsText PopupEditFormCaption="Tracking - Planner" />
             <SettingsDataSecurity AllowInsert="True" />
             <Styles>
-                <Header BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" HorizontalAlign="Center"
-                    Wrap="True">
+                <Header BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" HorizontalAlign="Center" Wrap="True">
                 </Header>
             </Styles>
             <Templates>

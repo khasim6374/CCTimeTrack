@@ -8,6 +8,10 @@ Imports System.Data.SqlClient
 
 Partial Class TrackingPlanner
     Inherits System.Web.UI.Page
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        grid2.Visible = True
+        MultiGrid.Visible = False
+    End Sub
     Protected Sub grid2_ClientLayout(sender As Object, e As ASPxClientLayoutArgs)
         If e.LayoutMode = ClientLayoutMode.Loading Then
             Session("TPMainLayout") = grid2.SaveClientLayout()
@@ -491,6 +495,7 @@ Partial Class TrackingPlanner
             ClientColumn.PropertiesComboBox.ValueField = "ClientId"
             ClientColumn.FieldName = "ClientId"
             ClientColumn.Caption = "Client"
+            ClientColumn.Settings.SortMode = DevExpress.XtraGrid.ColumnSortMode.DisplayText
             ClientColumn.VisibleIndex = 1
             ClientColumn.EditFormSettings.Visible = True
             ClientColumn.EditFormSettings.VisibleIndex = "0"
@@ -503,6 +508,7 @@ Partial Class TrackingPlanner
             SupplierColumn.PropertiesComboBox.ValueField = "SupplierId"
             SupplierColumn.FieldName = "SupplierId"
             SupplierColumn.Caption = "Supplier"
+            SupplierColumn.Settings.SortMode = DevExpress.XtraGrid.ColumnSortMode.DisplayText
             SupplierColumn.VisibleIndex = 2
             SupplierColumn.EditFormSettings.Visible = True
             SupplierColumn.EditFormSettings.VisibleIndex = "1"
@@ -643,6 +649,7 @@ Partial Class TrackingPlanner
             ClientColumn.PropertiesComboBox.ValueField = "ClientId"
             ClientColumn.FieldName = "ClientId"
             ClientColumn.Caption = "Client"
+            ClientColumn.Settings.SortMode = DevExpress.XtraGrid.ColumnSortMode.DisplayText
             ClientColumn.VisibleIndex = 1
             ClientColumn.EditFormSettings.Visible = True
             ClientColumn.EditFormSettings.VisibleIndex = "0"
@@ -655,6 +662,7 @@ Partial Class TrackingPlanner
             SupplierColumn.PropertiesComboBox.ValueField = "SupplierId"
             SupplierColumn.FieldName = "SupplierId"
             SupplierColumn.Caption = "Supplier"
+            SupplierColumn.Settings.SortMode = DevExpress.XtraGrid.ColumnSortMode.DisplayText
             SupplierColumn.VisibleIndex = 2
             SupplierColumn.EditFormSettings.Visible = True
             SupplierColumn.EditFormSettings.VisibleIndex = "1"
@@ -861,6 +869,31 @@ Partial Class TrackingPlanner
         End If
         If e.Column IsNot Nothing And e.Column.FieldName = "SupplierId" Then
             Field = "supplierName"
+        End If
+        If Field IsNot Nothing Then
+            Dim field1 As Object = e.GetRow1Value(Field)
+            Dim field2 As Object = e.GetRow2Value(Field)
+            Dim res As Integer = Comparer.Default.Compare(field1, field2)
+            If res = 0 Then
+                Dim field11 As Object = e.Value1
+                Dim field22 As Object = e.Value2
+                res = Comparer.Default.Compare(field11, field22)
+            End If
+            e.Result = res
+            e.Handled = True
+        End If
+    End Sub
+
+    Protected Sub MultiGrid_CustomColumnSort(ByVal sender As Object, ByVal e As CustomColumnSortEventArgs)
+        Dim Field = Nothing
+        If e.Column IsNot Nothing And e.Column.FieldName = "StatusId" Then
+            Field = "sortorderPlanningWeb"
+        End If
+        If e.Column IsNot Nothing And e.Column.FieldName = "ClientId" Then
+            Field = "ClientName"
+        End If
+        If e.Column IsNot Nothing And e.Column.FieldName = "SupplierId" Then
+            Field = "SupplierName"
         End If
         If Field IsNot Nothing Then
             Dim field1 As Object = e.GetRow1Value(Field)
